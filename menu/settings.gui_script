@@ -33,7 +33,7 @@ end
 
 function update(self, dt)
 	if data.state == data.STATE_SETTINGS then
-		local pos = vmath.vector3(self.item[self.cursor].x - 32, self.item[self.cursor].y + 1, 0)
+		local pos = vmath.vector3(self.item[self.cursor].x - 8, self.item[self.cursor].y, 0)
 		gui.set_position(gui.get_node("cursor"), pos)
 	end
 end

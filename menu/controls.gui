@@ -9,8 +9,8 @@ fonts {
 }
 nodes {
   position {
-    x: 640.0
-    y: 360.0
+    x: 160.0
+    y: 90.0
   }
   type: TYPE_BOX
   id: "container"
@@ -19,11 +19,11 @@ nodes {
 }
 nodes {
   position {
-    y: 150.0
+    y: 64.0
   }
   size {
-    x: 620.0
-    y: 50.0
+    x: 256.0
+    y: 24.0
   }
   type: TYPE_TEXT
   text: "CONTROLS"
@@ -47,11 +47,11 @@ nodes {
 }
 nodes {
   position {
-    x: -10.0
+    x: -4.0
   }
   size {
-    x: 300.0
-    y: 200.0
+    x: 100.0
+    y: 100.0
   }
   type: TYPE_TEXT
   text: "move\n"
@@ -80,11 +80,11 @@ nodes {
 }
 nodes {
   position {
-    x: 10.0
+    x: 4.0
   }
   size {
-    x: 300.0
-    y: 200.0
+    x: 100.0
+    y: 100.0
   }
   type: TYPE_TEXT
   text: "ARROWS\n"
@@ -113,16 +113,16 @@ nodes {
 }
 nodes {
   position {
-    y: -150.0
+    y: -64.0
   }
   size {
-    x: 620.0
-    y: 50.0
+    x: 256.0
+    y: 16.0
   }
   type: TYPE_TEXT
   text: "GAMEPAD COMPATIBLE"
   font: "main"
-  id: "controls1"
+  id: "gamepad"
   outline {
     x: 1.0
     y: 1.0

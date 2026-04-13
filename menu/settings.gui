@@ -13,18 +13,14 @@ textures {
 }
 nodes {
   position {
-    x: 640.0
-    y: 360.0
+    x: 160.0
+    y: 90.0
   }
   type: TYPE_BOX
   id: "container"
   inherit_alpha: true
 }
 nodes {
-  scale {
-    x: 4.0
-    y: 4.0
-  }
   type: TYPE_BOX
   texture: "game/cursor"
   id: "cursor"
@@ -34,11 +30,11 @@ nodes {
 }
 nodes {
   position {
-    y: 276.0
+    y: 64.0
   }
   size {
-    x: 620.0
-    y: 50.0
+    x: 256.0
+    y: 24.0
   }
   type: TYPE_TEXT
   text: "SETTINGS"
@@ -59,12 +55,12 @@ nodes {
 }
 nodes {
   position {
-    x: -280.0
-    y: 38.0
+    x: -64.0
+    y: 12.0
   }
   size {
-    x: 400.0
-    y: 50.0
+    x: 128.0
+    y: 16.0
   }
   type: TYPE_TEXT
   text: "SOUND VOLUME"
@@ -86,11 +82,11 @@ nodes {
 }
 nodes {
   position {
-    x: 560.0
+    x: 128.0
   }
   size {
-    x: 400.0
-    y: 50.0
+    x: 128.0
+    y: 16.0
   }
   type: TYPE_TEXT
   text: "0"
@@ -112,12 +108,12 @@ nodes {
 }
 nodes {
   position {
-    x: -280.0
-    y: -26.0
+    x: -64.0
+    y: -12.0
   }
   size {
-    x: 400.0
-    y: 50.0
+    x: 128.0
+    y: 16.0
   }
   type: TYPE_TEXT
   text: "MUSIC VOLUME"
@@ -139,11 +135,11 @@ nodes {
 }
 nodes {
   position {
-    x: 560.0
+    x: 128.0
   }
   size {
-    x: 400.0
-    y: 50.0
+    x: 128.0
+    y: 16.0
   }
   type: TYPE_TEXT
   text: "0"
@@ -165,12 +161,12 @@ nodes {
 }
 nodes {
   position {
-    x: -280.0
-    y: -282.0
+    x: -64.0
+    y: -64.0
   }
   size {
-    x: 400.0
-    y: 50.0
+    x: 128.0
+    y: 16.0
   }
   type: TYPE_TEXT
   text: "BACK\n"

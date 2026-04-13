@@ -11,9 +11,9 @@ nodes {
     y: 720.0
   }
   color {
-    x: 0.105882354
-    y: 0.10980392
-    z: 0.2
+    x: 0.0
+    y: 0.0
+    z: 0.0
   }
   type: TYPE_BOX
   id: "shutter"

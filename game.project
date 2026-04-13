@@ -24,8 +24,8 @@ max_count = 0
 game_binding = /game.input_bindingc
 
 [display]
-width = 1280
-height = 720
+width = 320
+height = 180
 
 [project]
 dependencies#0 = https://github.com/subsoap/defos/archive/refs/tags/v2.8.6.zip

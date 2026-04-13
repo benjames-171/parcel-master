@@ -13,8 +13,8 @@ textures {
 }
 nodes {
   position {
-    x: 640.0
-    y: 360.0
+    x: 160.0
+    y: 90.0
   }
   type: TYPE_BOX
   id: "container"
@@ -22,10 +22,6 @@ nodes {
   inherit_alpha: true
 }
 nodes {
-  scale {
-    x: 4.0
-    y: 4.0
-  }
   type: TYPE_BOX
   texture: "game/cursor"
   id: "arrow"
@@ -36,12 +32,11 @@ nodes {
 }
 nodes {
   position {
-    x: -80.0
-    y: -136.0
+    x: -27.0
   }
   size {
-    x: 200.0
-    y: 40.0
+    x: 100.0
+    y: 16.0
   }
   type: TYPE_TEXT
   text: "NEW GAME"
@@ -66,12 +61,12 @@ nodes {
 }
 nodes {
   position {
-    x: -80.0
-    y: -176.0
+    x: -27.0
+    y: -16.0
   }
   size {
-    x: 200.0
-    y: 40.0
+    x: 100.0
+    y: 16.0
   }
   type: TYPE_TEXT
   text: "CONTROLS"
@@ -96,12 +91,12 @@ nodes {
 }
 nodes {
   position {
-    x: -80.0
-    y: -216.0
+    x: -27.0
+    y: -32.0
   }
   size {
-    x: 200.0
-    y: 40.0
+    x: 100.0
+    y: 16.0
   }
   type: TYPE_TEXT
   text: "SETTINGS"
@@ -126,12 +121,12 @@ nodes {
 }
 nodes {
   position {
-    x: -80.0
-    y: -256.0
+    x: -27.0
+    y: -48.0
   }
   size {
-    x: 200.0
-    y: 40.0
+    x: 100.0
+    y: 16.0
   }
   type: TYPE_TEXT
   text: "CREDITS"
@@ -155,9 +150,12 @@ nodes {
   shadow_alpha: 0.0
 }
 nodes {
+  position {
+    y: -82.0
+  }
   size {
     x: 200.0
-    y: 32.0
+    y: 16.0
   }
   type: TYPE_TEXT
   text: "..."

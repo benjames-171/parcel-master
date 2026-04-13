@@ -30,7 +30,7 @@ end
 
 function update(self, dt)
 	if data.state == data.STATE_MENU then
-		local pos = vmath.vector3(self.menuitem[self.cursor].x - 32, self.menuitem[self.cursor].y + 1, 0)
+		local pos = vmath.vector3(self.menuitem[self.cursor].x - 8, self.menuitem[self.cursor].y, 0)
 		gui.set_position(gui.get_node("arrow"), pos)
 	end
 end

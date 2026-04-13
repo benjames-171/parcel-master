@@ -10,12 +10,11 @@ function init(self)
 	end
 	self.node = gui.get_node("container")
 	gui.set_enabled(self.node, false)
-	gui.set_position(self.node, vmath.vector3(data.SCR_W/2, (data.SCR_H/2), 0))
 end
 
 function update(self, dt)
 	if data.state == data.STATE_PAUSE then
-		local pos = vmath.vector3(self.menuitem[self.cursor].x - 32, self.menuitem[self.cursor].y, 0)
+		local pos = vmath.vector3(self.menuitem[self.cursor].x - 8, self.menuitem[self.cursor].y, 0)
 		gui.set_position(gui.get_node("arrow"), pos)
 	end
 end
