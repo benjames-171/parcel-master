@@ -1,19 +1,15 @@
 local data = require "main.data"
 local ui = require "main.ui"
 
-local MENU_LEN = 4
+local MENU_LEN = 3
 
 function init(self)
-	self.cursor = 1
-	self.menuitem = {}
-
 	msg.post(".", "acquire_input_focus")
 	self.node = gui.get_node("container")
+	self.button = {}
 	for n = 1, MENU_LEN do
-		self.menuitem[n] = gui.get_position(gui.get_node(tostring(n)))
+		self.button[n] = gui.get_node(tostring(n))
 	end
-	gui.set_position(self.node, vmath.vector3(data.SCR_W/2, (data.SCR_H/2), 0))
-	gui.set_text(gui.get_node("v"), sys.get_config("project.version"))
 	data.state = data.STATE_MENU
 end
 
@@ -23,16 +19,15 @@ local function startgame(self)
 	data.state = data.STATE_PLAYING
 end	
 
+function update(self, dt)
+	if data.state == data.STATE_MENU then
+
+	end
+end
+
 local function show(self)
 	ui.show(self.node)
 	data.state = data.STATE_MENU
-end
-
-function update(self, dt)
-	if data.state == data.STATE_MENU then
-		local pos = vmath.vector3(self.menuitem[self.cursor].x - 8, self.menuitem[self.cursor].y, 0)
-		gui.set_position(gui.get_node("arrow"), pos)
-	end
 end
 
 function on_message(self, message_id, message, sender)
@@ -42,41 +37,20 @@ function on_message(self, message_id, message, sender)
 end
 
 local function input(self, action_id, action)
-	if action_id == hash("up") and action.pressed then
-		self.cursor = self.cursor - 1
-		if self.cursor < 1 then
-			self.cursor = MENU_LEN
-		end
-		data.sound("menu-move")
-	elseif action_id == hash("down") and action.pressed then
-		self.cursor = self.cursor + 1
-		if self.cursor > MENU_LEN then
-			self.cursor = 1
-		end
-		data.sound("menu-move")
-	elseif action_id == hash("action") and action.pressed then
+	if action_id == hash("action") and action.pressed then
 		ui.hide(self.node)
-		if self.cursor == 1 then
+		if gui.pick_node(self.button[1], action.x, action.y) then
 			startgame(self)
-		elseif self.cursor == 2 then
-			msg.post("#controls", "show")
-		elseif self.cursor == 3 then
+		elseif gui.pick_node(self.button[2], action.x, action.y) then
 			msg.post("#settings", "show")
-		elseif self.cursor == 4 then
+		elseif gui.pick_node(self.button[3], action.x, action.y) then
 			msg.post("#credits", "show")
 		end
 		data.sound("menu-select")
-	elseif action_id == hash("start") and action.pressed then
-		startgame(self)
-	elseif action_id == hash("exit") and action.pressed and not html5 then
-		msg.post("@system:", "exit", {code = 0})
 	end
 end
 
 function on_input(self, action_id, action)
-	if action.value < 0.2 then return
-	end
-
 	if data.state == data.STATE_MENU then
 		input(self, action_id, action)
 	elseif data.state == data.STATE_CONTROLS then

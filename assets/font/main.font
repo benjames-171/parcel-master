@@ -1,6 +1,10 @@
-font: "/assets/font/PressStart2P-vaV7.ttf"
+font: "/assets/font/Kapel.ttf"
 material: "/builtins/fonts/font.material"
-size: 8
+size: 16
 antialias: 0
 outline_alpha: 1.0
+outline_width: 1.0
+shadow_alpha: 1.0
+shadow_y: -1.0
+render_mode: MODE_MULTI_LAYER
 characters: " !\"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~"

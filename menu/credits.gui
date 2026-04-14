@@ -4,8 +4,8 @@ fonts {
   font: "/assets/font/main.font"
 }
 fonts {
-  name: "large"
-  font: "/assets/font/large.font"
+  name: "small"
+  font: "/assets/font/small.font"
 }
 nodes {
   position {
@@ -27,7 +27,7 @@ nodes {
   }
   type: TYPE_TEXT
   text: "CREDITS"
-  font: "large"
+  font: "main"
   id: "title"
   outline {
     x: 1.0
@@ -108,6 +108,35 @@ nodes {
   outline_alpha: 0.0
   shadow_alpha: 0.0
   text_leading: 1.8
+}
+nodes {
+  position {
+    y: -82.0
+  }
+  size {
+    x: 200.0
+    y: 16.0
+  }
+  type: TYPE_TEXT
+  text: "..."
+  font: "small"
+  id: "v"
+  outline {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+  shadow {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+  adjust_mode: ADJUST_MODE_STRETCH
+  parent: "container"
+  inherit_alpha: true
+  alpha: 0.2
+  outline_alpha: 0.0
+  shadow_alpha: 0.0
 }
 material: "/builtins/materials/gui.material"
 adjust_reference: ADJUST_REFERENCE_PARENT

@@ -3,10 +3,6 @@ fonts {
   name: "main"
   font: "/assets/font/main.font"
 }
-fonts {
-  name: "large"
-  font: "/assets/font/large.font"
-}
 nodes {
   position {
     x: 160.0
@@ -27,7 +23,7 @@ nodes {
   }
   type: TYPE_TEXT
   text: "CONTROLS"
-  font: "large"
+  font: "main"
   id: "controls"
   outline {
     x: 1.0

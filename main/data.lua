@@ -17,8 +17,6 @@ M.state = M.STATE_MENU
 
 M.SCR_W = 0
 M.SCR_H = 0
-M.CANV_W = 0
-M.CANV_H = 0
 M.TILE = 16
 M.PIXEL = 4
 M.MAX_LEVELS = 10
@@ -29,11 +27,8 @@ M.FILE_NAME = "game.sav"
 
 M.level = 1
 M.time = 0
-M.offset = vmath.vector3()
-M.scrollpos = vmath.vector3()
-M.bounds = vmath.vector3()
-
 M.gate = {}
+M.vp = vmath.vector4()
 
 M.save = {
 	sfx = 7,
@@ -67,24 +62,6 @@ function M.hex2rgba(hex)
 	hex = hex:gsub("#","")
 	local rgba = vmath.vector4(tonumber("0x"..hex:sub(1,2))/255, tonumber("0x"..hex:sub(3,4))/255, tonumber("0x"..hex:sub(5,6))/255, 1)
 	return rgba
-end
-
-function M.onscreen(p, m)
-	if p.x > M.scrollpos.x - m and
-		p.x < M.scrollpos.x + m + M.CANV_W and
-		p.y > M.scrollpos.y - m and
-		p.y < M.scrollpos.y + m + M.CANV_H then
-		return true
-	else
-		return false
-	end
-end
-
-function M.capdt(dt)
-	if dt > 1/30 then
-		dt = 1/30
-	end
-	return dt
 end
 
 function M.clamp(v, min, max)

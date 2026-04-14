@@ -1,0 +1,6 @@
+tile_set: "/game/core/game.tilesource"
+layers {
+  id: "world"
+  z: 0.0
+}
+material: "/builtins/materials/tile_map.material"

@@ -1,0 +1,33 @@
+local DELAY = 0.1
+local TIME = 0.3
+
+local function disablenode (self, node)
+	gui.set_enabled(node, false)
+end
+
+function init(self)
+	gui.set_render_order(14)
+	self.node = gui.get_node("container")
+end
+
+local function fadein(self)
+	gui.set_enabled(self.node, true)
+	gui.set_alpha(self.node, 1)
+	gui.animate(self.node, "color.w", 0, gui.EASING_LINEAR, TIME, DELAY, disablenode)
+end
+
+local function fadeout(self)
+	gui.set_enabled(self.node, true)
+	gui.set_alpha(self.node, 0)
+	gui.animate(self.node, "color.w", 1, gui.EASING_LINEAR, TIME, DELAY)
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("show") then
+		gui.set_enabled(self.node, false)
+	elseif message_id == hash("fadein") then
+		fadein(self)
+	elseif message_id == hash("fadeout") then
+		fadeout(self)
+	end
+end

@@ -4,6 +4,9 @@ local ui = require "main.ui"
 function init(self)
 	self.node = gui.get_node("container")
 	ui.init(self.node)
+	local info = sys.get_engine_info()
+	local text = string.format("v%s [%s] - Copyright 2026 171DEV", sys.get_config("project.version"), info.version)
+	gui.set_text(gui.get_node("v"), text)
 end
 
 local function input(self, action_id, action)

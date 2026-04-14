@@ -1,21 +1,26 @@
 local data = require "main.data"
 
-local function parse(self)
-	local sx, sy, w, h = tilemap.get_bounds("#tilemap")
+local WIDTH = 16
+local HEIGHT = 11
 
-	data.bounds = vmath.vector4(
-		(sx - 1) * data.TILE,
-		(sy - 1) * data.TILE,
-		((sx + w - 1) * data.TILE) - data.CANV_W,
-		((sy + h - 1) * data.TILE) - data.CANV_H)
-	
-	for y = sy, h+sy-1 do
-		for x = sx, w+sx-1 do
-			local t = tilemap.get_tile("#tilemap", "world", x, y)
-			if t == 1 then
-				tilemap.set_tile("#tilemap", "world", x, y, 0)
-				msg.post("common/player", "pos", {pos = data.tile2world(vmath.vector3(x, y, 0.5))})
-			end
+local function tilecopy(x, y)
+	local tile = tilemap.get_tile("#levels", "main", x, y + ((data.level - 1) * HEIGHT))
+	local info = tilemap.get_tile_info("#levels", "main", x, y)
+	local transform = 0
+
+	if info.h_flip then transform = tilemap.H_FLIP end
+	if info.v_flip then transform = transform + tilemap.V_FLIP end
+	if info.rotate_90 then transform = transform + tilemap.ROTATE_90 end
+	if info.rotate_180 then transform = transform + tilemap.ROTATE_180 end
+	if info.rotate_270 then transform = transform + tilemap.ROTATE_270 end
+
+	tilemap.set_tile("#screen", "main", x, y, tile, transform)
+end
+
+local function parse(self)
+	for y = 1, HEIGHT do
+		for x = 1, WIDTH do
+			tilecopy(x, y)
 		end
 	end
 end
