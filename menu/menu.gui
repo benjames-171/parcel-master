@@ -41,7 +41,7 @@ nodes {
     y: -34.0
   }
   size {
-    x: 80.0
+    x: 90.0
     y: 32.0
   }
   type: TYPE_BOX
@@ -114,7 +114,7 @@ nodes {
 }
 nodes {
   position {
-    y: -66.0
+    y: -64.0
   }
   size {
     x: 60.0

@@ -30,9 +30,9 @@ nodes {
     y: 16.0
   }
   color {
-    x: 0.92156863
-    y: 0.8352941
-    z: 0.7411765
+    x: 0.89411765
+    y: 0.7294118
+    z: 0.19607843
   }
   type: TYPE_TEXT
   text: "CREDITS"
@@ -61,9 +61,9 @@ nodes {
     y: 100.0
   }
   color {
-    x: 0.92156863
-    y: 0.8352941
-    z: 0.7411765
+    x: 0.6
+    y: 0.5529412
+    z: 0.63529414
   }
   type: TYPE_TEXT
   text: "developed by\n"
@@ -122,7 +122,7 @@ nodes {
 }
 nodes {
   position {
-    y: -44.0
+    y: -84.0
   }
   size {
     x: 200.0
@@ -162,11 +162,6 @@ nodes {
     x: 60.0
     y: 18.0
   }
-  color {
-    x: 0.92156863
-    y: 0.8352941
-    z: 0.7411765
-  }
   type: TYPE_BOX
   texture: "game/button-blue"
   id: "close"
@@ -183,6 +178,11 @@ nodes {
   size {
     x: 40.0
     y: 8.0
+  }
+  color {
+    x: 0.92156863
+    y: 0.8352941
+    z: 0.7411765
   }
   type: TYPE_TEXT
   text: "CLOSE"
