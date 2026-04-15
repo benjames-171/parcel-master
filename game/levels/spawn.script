@@ -1,4 +1,4 @@
-local OFFSET = 9
+local data = require "main.data"
 
 go.property("move", vmath.vector3())
 
@@ -10,7 +10,7 @@ local function spawn(self)
 
 	local pos = go.get_position()
 
-	pos = pos + self.move * OFFSET
+	pos = pos + self.move * data.TILE
 	factory.create("#parcel-fac", pos, nil, {move = self.dir})
 end
 

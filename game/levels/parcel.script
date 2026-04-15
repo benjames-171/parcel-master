@@ -4,37 +4,30 @@ local TIME = 0.5
 
 go.property("move", vmath.vector3())
 
-local function findedge(self, pos, move)
-	
-	
-	return pos
-end
-
 local function move(self)
 	local pos = data.world2tile(go.get_position())
 	local t = tilemap.get_tile("level#screen", "main", pos.x, pos.y)
 	local v = self.dir[t]
 
-	pos = findedge(self, pos, v)
-	go.animate(".", "position.x", go.PLAYBACK_ONCE_FORWARD, pos.x + v.x, v.z, TIME, 0, move)
-	go.animate(".", "position.y", go.PLAYBACK_ONCE_FORWARD, pos.y + v.y, v.w, TIME, 0, move)
+	pos = data.tile2world(pos + v)
+	go.animate(".", "position", go.PLAYBACK_ONCE_FORWARD, pos, go.EASING_LINEAR, TIME, 0, move)
 end
 
 function init(self)
 	self.dir = {
-		[29] = vmath.vector4(1, 1, go.EASING_INSINE, go.EASING_OUTSINE),
-		[30] = vmath.vector4(1, 0, go.EASING_LINEAR, go.EASING_LINEAR),
-		[31] = vmath.vector4(1, -1, go.EASING_OUTSINE, go.EASING_INSINE),
-		[32] = vmath.vector4(-1, -1, go.EASING_OUTSINE, go.EASING_INSINE),
-		[33] = vmath.vector4(-1, 1, go.EASING_OUTSINE, go.EASING_INSINE),
-		[43] = vmath.vector4(0, 1, go.EASING_LINEAR, go.EASING_LINEAR),
-		[44] = vmath.vector4(0, 0, go.EASING_LINEAR, go.EASING_LINEAR),
-		[45] = vmath.vector4(0, -1, go.EASING_LINEAR, go.EASING_LINEAR),
-		[46] = vmath.vector4(1, -1, go.EASING_OUTSINE, go.EASING_INSINE),
-		[47] = vmath.vector4(1, 1, go.EASING_OUTSINE, go.EASING_INSINE),
-		[57] = vmath.vector4(-1, 1, go.EASING_OUTSINE, go.EASING_INSINE),
-		[58] = vmath.vector4(-1, 0, go.EASING_LINEAR, go.EASING_LINEAR),
-		[59] = vmath.vector4(-1, -1, go.EASING_INSINE, go.EASING_OUTSINE),
+		[29] = vmath.vector3(1, 0, 0),
+		[30] = vmath.vector3(1, 0, 0),
+		[31] = vmath.vector3(0, -1, 0),
+		[32] = vmath.vector3(0, -1, 0),
+		[33] = vmath.vector3(-1, 0, 0),
+		[43] = vmath.vector3(0, 1, 0),
+		[44] = vmath.vector3(0, 0, 0),
+		[45] = vmath.vector3(0, -1, 0),
+		[46] = vmath.vector3(1, 0, 0),
+		[47] = vmath.vector3(0, 1, 0),
+		[57] = vmath.vector3(0, 1, 0),
+		[58] = vmath.vector3(-1, 0, 0),
+		[59] = vmath.vector3(-1, 0, 0)
 	}
 	move(self)
 end
