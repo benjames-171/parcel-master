@@ -5,7 +5,7 @@ components {
 embedded_components {
   id: "sprite"
   type: "sprite"
-  data: "default_animation: \"parcel-red\"\n"
+  data: "default_animation: \"parcel-1\"\n"
   "material: \"/builtins/materials/sprite.material\"\n"
   "textures {\n"
   "  sampler: \"texture_sampler\"\n"
@@ -13,6 +13,7 @@ embedded_components {
   "}\n"
   ""
   position {
+    y: 2.0
     z: 0.1
   }
 }
