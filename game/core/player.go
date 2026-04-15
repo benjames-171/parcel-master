@@ -1,6 +1,6 @@
 components {
   id: "player"
-  component: "/game/player/player.script"
+  component: "/game/core/player.script"
 }
 embedded_components {
   id: "co"

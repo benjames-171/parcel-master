@@ -1,10 +1,10 @@
 local data = require "main.data"
 
-local WIDTH = 16
+local WIDTH = 20
 local HEIGHT = 11
 
 local function tilecopy(x, y)
-	local tile = tilemap.get_tile("#levels", "main", x, y + ((data.level - 1) * HEIGHT))
+	local tile = tilemap.get_tile("#levels", "main", x, y + ((data.level - 1) * (HEIGHT + 4)))
 	local info = tilemap.get_tile_info("#levels", "main", x, y)
 	local transform = 0
 
@@ -15,16 +15,30 @@ local function tilecopy(x, y)
 	if info.rotate_270 then transform = transform + tilemap.ROTATE_270 end
 
 	tilemap.set_tile("#screen", "main", x, y, tile, transform)
+
+	return tile
 end
 
 local function parse(self)
-	for y = 1, HEIGHT do
-		for x = 1, WIDTH do
-			tilecopy(x, y)
+	for y = -1, HEIGHT + 2 do
+		for x = -1, WIDTH + 2 do
+			local t = tilecopy(x, y)
+			if t >= 6 and t <= 9 then
+				local pos = data.tile2world(vmath.vector3(x, y, 0))
+				factory.create("#spawn-fac", pos, nil, {move = self.move[t]})
+			end
 		end
 	end
 end
 
 function init(self)
+	msg.post("#levels", "disable")
+	self.obj = {}
+	self.move = {
+		[6] = vmath.vector3(0,1,0),
+		[7] = vmath.vector3(1,0,0),
+		[8] = vmath.vector3(0,-1,0),
+		[9] = vmath.vector3(-1,0,0)
+	}
 	parse(self)
 end

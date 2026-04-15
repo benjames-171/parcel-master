@@ -1,11 +1,7 @@
-script: "/game/gui/gameover.gui_script"
+script: "/menu/level.gui_script"
 fonts {
   name: "main"
   font: "/assets/font/main.font"
-}
-textures {
-  name: "game"
-  texture: "/game/core/game.tilesource"
 }
 nodes {
   position {
@@ -18,36 +14,17 @@ nodes {
   inherit_alpha: true
 }
 nodes {
-  size {
-    x: 128.0
+  position {
     y: 64.0
   }
-  type: TYPE_BOX
-  texture: "game/dialog"
-  id: "bg"
-  parent: "container"
-  inherit_alpha: true
-  slice9 {
-    x: 4.0
-    y: 4.0
-    z: 4.0
-    w: 4.0
-  }
-}
-nodes {
   size {
-    x: 128.0
+    x: 100.0
     y: 16.0
   }
-  color {
-    x: 0.92156863
-    y: 0.8352941
-    z: 0.7411765
-  }
   type: TYPE_TEXT
-  text: "GAME OVER"
+  text: "SELECT LEVEL"
   font: "main"
-  id: "text"
+  id: "controls"
   outline {
     x: 1.0
     y: 1.0

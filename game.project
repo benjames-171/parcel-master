@@ -25,8 +25,9 @@ game_binding = /game.input_bindingc
 
 [display]
 width = 320
-height = 180
+height = 176
 
 [project]
+title = Parcel Master
 dependencies#0 = https://github.com/subsoap/defos/archive/refs/tags/v2.8.6.zip
 

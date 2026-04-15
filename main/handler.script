@@ -4,7 +4,7 @@ local input = require "main.input"
 function init(self)
 	msg.post(".", "acquire_input_focus")
 	msg.post("handler#menu", "load")
-	msg.post("@render:", "clear_color", {color = data.hex2rgba("#2b1a4b")})
+	msg.post("@render:", "clear_color", {color = data.hex2rgba("#08050e")})
 	math.randomseed(os.time())
 	input.alt = false
 	for _ = 1, 5 do
@@ -12,7 +12,7 @@ function init(self)
 	end
 	self.restart = nil
 	data.loadgamefile()
-	defos.set_view_size(nil, nil, 320 * data.PIXEL, 180 * data.PIXEL)
+	defos.set_view_size(nil, nil, 320 * data.PIXEL, 176 * data.PIXEL)
 	defos.set_fullscreen(data.save.fullscreen)
 	defos.set_cursor_visible(not data.save.fullscreen)
 end

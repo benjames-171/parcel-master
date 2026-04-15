@@ -1,0 +1,5 @@
+go.property("id", 1)
+
+function init(self)
+	sprite.play_flipbook("#sprite", "anim"..self.id)
+end
