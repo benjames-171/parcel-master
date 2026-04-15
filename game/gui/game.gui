@@ -3,12 +3,20 @@ fonts {
   name: "main"
   font: "/assets/font/main.font"
 }
-background_color {
-  x: 0.0
-  y: 0.0
-  z: 0.0
-  w: 1.0
+textures {
+  name: "game"
+  texture: "/game/core/game.tilesource"
+}
+nodes {
+  position {
+    x: 307.0
+    y: 163.0
+  }
+  type: TYPE_BOX
+  texture: "game/menu"
+  id: "menu"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
 }
 material: "/builtins/materials/gui.material"
 adjust_reference: ADJUST_REFERENCE_PARENT
-max_nodes: 512

@@ -1,22 +1,8 @@
 local data = require "main.data"
 
-local MENU_LEN = 2
-
 function init(self)
-	self.cursor = 1
-	self.menuitem = {}
-	for n = 1, MENU_LEN do
-		self.menuitem[n] = gui.get_position(gui.get_node(tostring(n)))
-	end
 	self.node = gui.get_node("container")
 	gui.set_enabled(self.node, false)
-end
-
-function update(self, dt)
-	if data.state == data.STATE_PAUSE then
-		local pos = vmath.vector3(self.menuitem[self.cursor].x - 8, self.menuitem[self.cursor].y, 0)
-		gui.set_position(gui.get_node("arrow"), pos)
-	end
 end
 
 local function close(self)
@@ -26,24 +12,12 @@ local function close(self)
 end
 
 local function input(self, action_id, action)
-	if action_id == hash("up") and action.pressed then
-		self.cursor = self.cursor - 1
-		if self.cursor < 1 then
-			self.cursor = MENU_LEN
-		end
-		data.sound("menu-move")
-	elseif action_id == hash("down") and action.pressed then
-		self.cursor = self.cursor + 1
-		if self.cursor > MENU_LEN then
-			self.cursor = 1
-		end
-		data.sound("menu-move")
-	elseif action_id == hash("action") and action.pressed then
-		if self.cursor == 1 then
+	if action_id == hash("action") and action.pressed then
+		if gui.pick_node(gui.get_node("resume"), action.x, action.y) then
 			close(self)
-		elseif self.cursor == 2 then
+		elseif gui.pick_node(gui.get_node("quit"), action.x, action.y) then
 			msg.post("main:/handler", "set_time_step", {factor = 1, mode = 0})
-			msg.post("/common/player", "quit")
+			msg.post("player", "quit")
 		end
 	elseif action_id == hash("exit") and action.pressed then
 		close(self)

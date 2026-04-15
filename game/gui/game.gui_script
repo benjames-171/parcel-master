@@ -3,6 +3,16 @@ local data = require "main.data"
 function update(self, dt)
 end
 
-function on_message(self, message_id, message, sender)
+local function input(self, action_id, action)
+	if action_id == hash("action") and action.pressed then
+		if gui.pick_node(gui.get_node("menu"), action.x, action.y) then
+			msg.post("#pause", "show")
+		end
+	end
 end
-
+	
+function on_message(self, message_id, message, sender)
+	if message_id == hash("input") then
+		input(self, message.action_id, message.action)
+	end
+end

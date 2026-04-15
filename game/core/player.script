@@ -22,23 +22,24 @@ local function input_playing(self, action_id, action)
 		msg.post("#co", "enable")
 		timer.delay(1/30, false, function() msg.post("#co", "disable") end)
 	elseif action_id == hash("exit") and action.pressed then
-		msg.post("view#pause", "show")
+		msg.post("gui#pause", "show")
 	elseif action_id == hash("debug") and action.pressed and sys.get_engine_info().is_debug then
-		msg.post("/common/view#clear", "show")
+		
 	end
 end
 
 function on_input(self, action_id, action)
 	if data.state == data.STATE_PLAYING then
 		input_playing(self, action_id, action)
+		msg.post("gui#game", "input", {action_id = action_id, action = action})
 	elseif data.state == data.STATE_PAUSE then
-		msg.post("view#pause", "input", {action_id = action_id, action = action})
+		msg.post("gui#pause", "input", {action_id = action_id, action = action})
 	elseif data.state == data.STATE_CLEAR then
-		msg.post("view#clear", "input", {action_id = action_id, action = action})
+		msg.post("gui#clear", "input", {action_id = action_id, action = action})
 	elseif data.state == data.STATE_GAMEOVER then
-		msg.post("view#gameover", "input", {action_id = action_id, action = action})
+		msg.post("gui#gameover", "input", {action_id = action_id, action = action})
 	elseif data.state == data.STATE_COMPLETE then
-		msg.post("view#complete", "input", {action_id = action_id, action = action})
+		msg.post("gui#complete", "input", {action_id = action_id, action = action})
 	end
 end
 

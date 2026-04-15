@@ -39,20 +39,18 @@ nodes {
   font: "main"
   id: "title"
   outline {
-    x: 1.0
-    y: 1.0
-    z: 1.0
+    x: 0.03137255
+    y: 0.019607844
+    z: 0.05490196
   }
   shadow {
-    x: 1.0
-    y: 1.0
-    z: 1.0
+    x: 0.03137255
+    y: 0.019607844
+    z: 0.05490196
   }
   adjust_mode: ADJUST_MODE_STRETCH
   parent: "container"
   inherit_alpha: true
-  outline_alpha: 0.0
-  shadow_alpha: 0.0
 }
 nodes {
   position {
@@ -75,20 +73,18 @@ nodes {
   id: "left"
   pivot: PIVOT_E
   outline {
-    x: 1.0
-    y: 1.0
-    z: 1.0
+    x: 0.03137255
+    y: 0.019607844
+    z: 0.05490196
   }
   shadow {
-    x: 1.0
-    y: 1.0
-    z: 1.0
+    x: 0.03137255
+    y: 0.019607844
+    z: 0.05490196
   }
   adjust_mode: ADJUST_MODE_STRETCH
   parent: "container"
   inherit_alpha: true
-  outline_alpha: 0.0
-  shadow_alpha: 0.0
 }
 nodes {
   position {
@@ -111,20 +107,18 @@ nodes {
   id: "right"
   pivot: PIVOT_W
   outline {
-    x: 1.0
-    y: 1.0
-    z: 1.0
+    x: 0.03137255
+    y: 0.019607844
+    z: 0.05490196
   }
   shadow {
-    x: 1.0
-    y: 1.0
-    z: 1.0
+    x: 0.03137255
+    y: 0.019607844
+    z: 0.05490196
   }
   adjust_mode: ADJUST_MODE_STRETCH
   parent: "container"
   inherit_alpha: true
-  outline_alpha: 0.0
-  shadow_alpha: 0.0
 }
 nodes {
   position {
@@ -179,15 +173,15 @@ nodes {
   parent: "container"
   inherit_alpha: true
   slice9 {
-    x: 8.0
-    y: 8.0
-    z: 8.0
-    w: 8.0
+    x: 4.0
+    y: 4.0
+    z: 4.0
+    w: 4.0
   }
 }
 nodes {
   size {
-    x: 48.0
+    x: 40.0
     y: 8.0
   }
   type: TYPE_TEXT
