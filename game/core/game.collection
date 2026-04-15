@@ -33,6 +33,12 @@ embedded_instances {
   "  data: \"prototype: \\\"/game/levels/spawn.go\\\"\\n"
   "\"\n"
   "}\n"
+  "embedded_components {\n"
+  "  id: \"junc-fac\"\n"
+  "  type: \"factory\"\n"
+  "  data: \"prototype: \\\"/game/levels/junction.go\\\"\\n"
+  "\"\n"
+  "}\n"
   ""
 }
 embedded_instances {

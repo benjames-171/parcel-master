@@ -5,7 +5,8 @@ local TIME = 0.5
 go.property("move", vmath.vector3())
 
 local function complete(self, t)
-	go.delete()
+	go.animate(".", "scale", go.PLAYBACK_ONCE_FORWARD, 0, go.EASING_LINEAR, 0.3, 0, function() go.delete() end)
+	go.animate("#sprite", "tint.w", go.PLAYBACK_ONCE_FORWARD, 0, go.EASING_LINEAR, 0.3)
 end
 
 local function move(self)

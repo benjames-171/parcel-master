@@ -3,7 +3,6 @@ local data = require "main.data"
 function init(self)
 	msg.post(".", "acquire_input_focus")
 	msg.post("#co", "disable")
-	self.click = false
 end
 
 local function quit2menu(self)
@@ -16,23 +15,12 @@ local function pauseinput(time)
 	timer.delay(time, false, function() msg.post(".", "acquire_input_focus") end)
 end
 
-function update(self, dt)
-	if data.state == data.STATE_PLAYING then
-		if self.click then
-			msg.post("#co", "disable")
-			self.click = false
-		end
-	end
-end
-
 local function input_playing(self, action_id, action)
-	if action_id == hash("up") then
-
-	elseif action_id == hash("action") and action.pressed then
+	if action_id == hash("action") and action.pressed then
 		local pos = vmath.vector3(action.x, action.y, 0)
-		pprint(data.vp)
 		go.set_position(pos)
 		msg.post("#co", "enable")
+		timer.delay(1/30, false, function() msg.post("#co", "disable") end)
 	elseif action_id == hash("exit") and action.pressed then
 		msg.post("view#pause", "show")
 	elseif action_id == hash("debug") and action.pressed and sys.get_engine_info().is_debug then

@@ -1,7 +1,7 @@
 tile_set: "/game/core/game.tilesource"
 layers {
   id: "back"
-  z: -1.0
+  z: -0.5
   cell {
     x: 1
     y: 1
@@ -966,5 +966,10 @@ layers {
     y: 12
     tile: 1
   }
+}
+layers {
+  id: "control"
+  z: 0.0
+  is_visible: 0
 }
 material: "/builtins/materials/tile_map.material"
