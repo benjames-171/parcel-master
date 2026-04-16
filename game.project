@@ -25,7 +25,7 @@ game_binding = /game.input_bindingc
 
 [display]
 width = 320
-height = 176
+height = 180
 
 [project]
 title = Parcel Master

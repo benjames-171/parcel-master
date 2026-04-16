@@ -16,6 +16,6 @@ end
 
 function init(self)
 	self.total = 50
-	self.handle = timer.delay(1, true, spawn)
+	self.handle = timer.delay(2, true, spawn)
 end
 

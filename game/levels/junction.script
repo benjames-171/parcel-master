@@ -14,7 +14,13 @@ function init(self)
 		[7] = {45,58},
 		[8] = {43,58},
 		[9] = {43,45},
-		[10] = {30,58},
+		[10] = {30,58}
+	}
+	self.arrow = {
+		[30] = "right",
+		[43] = "up",
+		[45] = "down",
+		[58] = "left"
 	}
 	self.dir = 1
 	tilemap.set_tile("level#screen", "main", self.pos.x, self.pos.y, self.valid[self.mask][self.dir])
@@ -28,6 +34,7 @@ local function switch(self)
 		t = self.valid[self.mask][self.dir]
 	end
 	tilemap.set_tile("level#screen", "main", self.pos.x, self.pos.y, t)
+	sprite.play_flipbook("#sprite", self.arrow[t])
 end
 
 function on_message(self, message_id, message, sender)

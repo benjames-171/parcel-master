@@ -41,8 +41,8 @@ embedded_components {
   "  w: 6.0\n"
   "}\n"
   "size {\n"
-  "  x: 18.0\n"
-  "  y: 18.0\n"
+  "  x: 26.0\n"
+  "  y: 26.0\n"
   "}\n"
   "size_mode: SIZE_MODE_MANUAL\n"
   "textures {\n"
@@ -51,6 +51,20 @@ embedded_components {
   "}\n"
   ""
   position {
-    z: 0.5
+    z: 0.1
+  }
+}
+embedded_components {
+  id: "sprite"
+  type: "sprite"
+  data: "default_animation: \"up\"\n"
+  "material: \"/builtins/materials/sprite.material\"\n"
+  "textures {\n"
+  "  sampler: \"texture_sampler\"\n"
+  "  texture: \"/game/core/game.tilesource\"\n"
+  "}\n"
+  ""
+  position {
+    z: 0.1
   }
 }

@@ -12,7 +12,7 @@ function init(self)
 	end
 	self.restart = nil
 	data.loadgamefile()
-	defos.set_view_size(nil, nil, 320 * data.PIXEL, 176 * data.PIXEL)
+	defos.set_view_size(nil, nil, data.SCR_W * data.PIXEL, data.SCR_H * data.PIXEL)
 	defos.set_fullscreen(data.save.fullscreen)
 	defos.set_cursor_visible(not data.save.fullscreen)
 end
