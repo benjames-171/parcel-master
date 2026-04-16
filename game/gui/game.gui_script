@@ -1,6 +1,7 @@
 local data = require "main.data"
 
-function update(self, dt)
+function update(self)
+	gui.set_text(gui.get_node("parcels"), tostring(data.parcels))
 end
 
 local function input(self, action_id, action)
@@ -10,7 +11,7 @@ local function input(self, action_id, action)
 		end
 	end
 end
-	
+
 function on_message(self, message_id, message, sender)
 	if message_id == hash("input") then
 		input(self, message.action_id, message.action)

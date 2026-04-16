@@ -6,16 +6,24 @@ go.property("move", vmath.vector3())
 
 local function complete(self, t)
 	local correct = true
-	print(t - 70, self.type)
 	if t - 70 == self.type then
-		
+		data.sound("positive")
 	else
+		data.sound("buzzer")
 		correct = false
+		data.stars = data.clamp(data.stars - 1, 0, 3)
+		if data.stars == 0 then
+			timer.delay(1, false, function() msg.post("gui#gameover", "show") end)
+		end
 	end
 	factory.create("#thumb-fac", nil, nil, {correct = correct})
-		
-	go.animate(".", "scale", go.PLAYBACK_ONCE_FORWARD, 0, go.EASING_LINEAR, 0.3, 0, function() go.delete() end)
+	go.animate(".", "scale", go.PLAYBACK_ONCE_FORWARD, 0, go.EASING_LINEAR, 0.3)
 	go.animate("#sprite", "tint.w", go.PLAYBACK_ONCE_FORWARD, 0, go.EASING_LINEAR, 0.3)
+	timer.delay(1.1, false, function() go.delete() end)
+	data.home = data.home - 1
+	if data.home <= 0 then
+		timer.delay(1, false, function() msg.post("gui#clear", "show") end)
+	end
 end
 
 local function move(self)

@@ -37,5 +37,48 @@ nodes {
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
 }
+nodes {
+  position {
+    x: 9.0
+    y: 171.0
+  }
+  type: TYPE_BOX
+  texture: "game/parcel-grey"
+  id: "parcel-icon"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 8.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  color {
+    x: 0.92156863
+    y: 0.8352941
+    z: 0.7411765
+  }
+  type: TYPE_TEXT
+  text: "00"
+  font: "main"
+  id: "parcels"
+  pivot: PIVOT_W
+  outline {
+    x: 0.03137255
+    y: 0.019607844
+    z: 0.05490196
+  }
+  shadow {
+    x: 0.03137255
+    y: 0.019607844
+    z: 0.05490196
+  }
+  adjust_mode: ADJUST_MODE_STRETCH
+  parent: "parcel-icon"
+  inherit_alpha: true
+}
 material: "/builtins/materials/gui.material"
 adjust_reference: ADJUST_REFERENCE_PARENT

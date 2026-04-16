@@ -3,19 +3,16 @@ local data = require "main.data"
 go.property("move", vmath.vector3())
 
 local function spawn(self)
-	self.total = self.total - 1
-	if self.total <= 0 then
+	data.parcels = data.parcels - 1
+	if data.parcels <= 0 then
 		timer.cancel(self.handle)
 	end
-
 	local pos = go.get_position()
-
 	pos = pos + self.move * data.TILE
 	factory.create("#parcel-fac", pos, nil, {move = self.dir})
 end
 
 function init(self)
-	self.total = 50
-	self.handle = timer.delay(2, true, spawn)
+	self.handle = timer.delay(1, true, spawn)
 end
 

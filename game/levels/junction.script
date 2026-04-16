@@ -35,6 +35,7 @@ local function switch(self)
 	end
 	tilemap.set_tile("level#screen", "main", self.pos.x, self.pos.y, t)
 	sprite.play_flipbook("#sprite", self.arrow[t])
+	data.sound("click")
 end
 
 function on_message(self, message_id, message, sender)

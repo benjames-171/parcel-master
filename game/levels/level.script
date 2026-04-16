@@ -19,16 +19,32 @@ local function tilecopy(x, y, layer)
 	return tile
 end
 
+local function setuplevel(self)
+	data.parcels = 1 --10 + (data.level * 2) 
+	data.home = data.parcels
+	data.stars = 3
+	if self.obj then
+		for _,v in pairs(self.obj) do
+			go.delete(v)
+		end
+	end
+	self.obj = {}
+end
+
 local function parse(self)
 	for y = -1, HEIGHT + 2 do
 		for x = -1, WIDTH + 2 do
 			tilecopy(x, y, "main")
+			local obj = nil
 			local c = tilecopy(x, y, "control")
 			local pos = data.tile2world(vmath.vector3(x, y, 0))
 			if c >= 6 and c <= 9 then
-				factory.create("#spawn-fac", pos, nil, {move = self.move[c]})
+				obj = factory.create("#spawn-fac", pos, nil, {move = self.move[c]})
 			elseif c >= 99 and c <= 108 then
-				factory.create("#junc-fac", pos, nil, {mask = c - 98})
+				obj = factory.create("#junc-fac", pos, nil, {mask = c - 98})
+			end
+			if obj then
+				table.insert(self.obj, obj)
 			end
 		end
 	end
@@ -36,12 +52,19 @@ end
 
 function init(self)
 	msg.post("#levels", "disable")
-	self.obj = {}
 	self.move = {
 		[6] = vmath.vector3(0, 1, 0),
 		[7] = vmath.vector3(1, 0, 0),
 		[8] = vmath.vector3(0, -1, 0),
 		[9] = vmath.vector3(-1, 0, 0)
 	}
+	setuplevel(self)
 	parse(self)
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("newlevel") then
+		setuplevel(self)
+		parse(self)
+	end
 end

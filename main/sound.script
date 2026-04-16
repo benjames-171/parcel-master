@@ -6,7 +6,7 @@ end
 
 function on_message(self, message_id, message, sender)
 	if message_id == hash("play") then
-		sound.play("#"..message.id, {gain = (message.vol * data.save.sfx) / 10})
+		sound.play("#"..message.id, {gain = (message.vol * data.save.sfx) / 10, speed = message.speed})
 	elseif message_id == hash("music") then
 		if data.currentsong ~= message.id then
 			if data.currentsong ~= nil then

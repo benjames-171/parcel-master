@@ -27,6 +27,9 @@ M.FILE_NAME = "game.sav"
 
 M.level = 1
 M.time = 0
+M.parcels = 0
+M.home = 0
+M.stars = 0
 M.gate = {}
 M.vp = vmath.vector4()
 
@@ -101,14 +104,15 @@ function M.ms2str(time)
 	return str
 end
 
-function M.sound(id, gate, vol)
+function M.sound(id, gate, vol, speed)
 	vol = vol or 1
+	speed = speed or 1
 	if M.save.sfx > 0 then
 		local t = M.gate[id] or 0
 		t = os.clock() - t
 		if t > (gate or M.GATE) then
 			M.gate[id] = os.clock()
-			msg.post("main:/sound", "play", {id = id, vol = vol})
+			msg.post("main:/sound", "play", {id = id, vol = vol, speed = speed})
 		end
 	end
 end
