@@ -54,7 +54,7 @@ nodes {
 }
 nodes {
   position {
-    x: -6.0
+    x: -2.0
   }
   size {
     x: 100.0
@@ -68,6 +68,7 @@ nodes {
   type: TYPE_TEXT
   text: "developed by\n"
   "music by\n"
+  "graphic assets\n"
   "game engine"
   font: "main"
   id: "left"
@@ -85,10 +86,11 @@ nodes {
   adjust_mode: ADJUST_MODE_STRETCH
   parent: "container"
   inherit_alpha: true
+  text_leading: 1.2
 }
 nodes {
   position {
-    x: 6.0
+    x: 2.0
   }
   size {
     x: 100.0
@@ -102,6 +104,7 @@ nodes {
   type: TYPE_TEXT
   text: "BEN JAMES\n"
   "COMPOSER\n"
+  "FONTENDDEV\n"
   "DEFOLD"
   font: "main"
   id: "right"
@@ -119,6 +122,7 @@ nodes {
   adjust_mode: ADJUST_MODE_STRETCH
   parent: "container"
   inherit_alpha: true
+  text_leading: 1.2
 }
 nodes {
   position {

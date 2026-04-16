@@ -1,12 +1,13 @@
 local data = require "main.data"
+local ui = require "main.ui"
 
 function init(self)
 	self.node = gui.get_node("container")
-	gui.set_enabled(self.node, false)
+	ui.init(self.node)
 end
 
 local function tryagain(self)
-	gui.set_enabled(self.node, false)
+	ui.hide(self.node)
 	data.state = data.STATE_PLAYING
 	msg.post("level", "newlevel")
 end
@@ -23,7 +24,7 @@ end
 
 function on_message(self, message_id, message, sender)
 	if message_id == hash("show") then
-		gui.set_enabled(self.node, true)
+		ui.show(self.node)
 		data.state = data.STATE_GAMEOVER
 	elseif message_id == hash("input") then
 		input(self, message.action_id, message.action)
