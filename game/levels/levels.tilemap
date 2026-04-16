@@ -462,7 +462,6 @@ layers {
     x: 0
     y: 6
     tile: 70
-    h_flip: 1
     v_flip: 1
     rotate90: 1
   }

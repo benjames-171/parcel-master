@@ -10,10 +10,12 @@ function init(self)
 end
 
 local function input(self, action_id, action)
-	if (action_id == hash("action") or action_id == hash("exit")) and action.pressed then
-		ui.hide(self.node)
-		msg.post("#menu", "show")
-		data.sound("menu-back")
+	if action_id == hash("action") and action.pressed then
+		if gui.pick_node(gui.get_node("back"), action.x, action.y) then
+			ui.hide(self.node)
+			msg.post("#menu", "show")
+			data.sound("menu-select")
+		end
 	end
 end
 

@@ -9,10 +9,11 @@ local function spawn(self)
 	end
 	local pos = go.get_position()
 	pos = pos + self.move * data.TILE
-	factory.create("#parcel-fac", pos, nil, {move = self.dir})
+	local obj = factory.create("#parcel-fac", pos, nil, {move = self.dir})
+	msg.post("level", "addobj", {url = obj})
 end
 
 function init(self)
-	self.handle = timer.delay(1, true, spawn)
+	self.handle = timer.delay(3 - (data.level / 5), true, spawn)
 end
 

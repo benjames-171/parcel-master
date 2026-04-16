@@ -1,22 +1,40 @@
 local data = require "main.data"
 local ui = require "main.ui"
 
+local MENU_LEN = 9
+
 function init(self)
 	self.node = gui.get_node("container")
 	ui.init(self.node)
+	self.button = {}
+	for n = 1, MENU_LEN do
+		self.button[n] = gui.get_node(tostring(n))
+	end
+	data.state = data.STATE_LEVEL
 end
 
 local function input(self, action_id, action)
-	if (action_id == hash("action") or action_id == hash("exit")) and action.pressed then
-		ui.hide(self.node)
-		msg.post("#menu", "show")
+	if action_id == hash("action") and action.pressed then
+		if gui.pick_node(gui.get_node("back"), action.x, action.y) then
+			ui.hide(self.node)
+			msg.post("#menu", "show")
+			data.sound("menu-select")
+		end
+
+		for n = 1, MENU_LEN do
+			if gui.pick_node(self.button[n], action.x, action.y) then
+				data.level = n
+				msg.post("main:/handler", "show_game")
+				data.sound("menu-select")
+			end
+		end
 	end
 end
 
 function on_message(self, message_id, message, sender)
 	if message_id == hash("show") then
 		ui.show(self.node)
-		data.state = data.STATE_CONTROLS
+		data.state = data.STATE_LEVEL
 	elseif message_id == hash("input") then
 		input(self, message.action_id, message.action)
 	end

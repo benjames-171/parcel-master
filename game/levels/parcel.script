@@ -1,6 +1,6 @@
 local data = require "main.data"
 
-local TIME = 0.1
+local TIME = 0.5
 
 go.property("move", vmath.vector3())
 
@@ -13,13 +13,13 @@ local function complete(self, t)
 		correct = false
 		data.stars = data.clamp(data.stars - 1, 0, 3)
 		if data.stars == 0 then
-			timer.delay(1, false, function() msg.post("gui#gameover", "show") end)
+			msg.post("gui#gameover", "show")
 		end
 	end
 	factory.create("#thumb-fac", nil, nil, {correct = correct})
 	go.animate(".", "scale", go.PLAYBACK_ONCE_FORWARD, 0, go.EASING_LINEAR, 0.3)
 	go.animate("#sprite", "tint.w", go.PLAYBACK_ONCE_FORWARD, 0, go.EASING_LINEAR, 0.3)
-	timer.delay(1.1, false, function() go.delete() end)
+	timer.delay(1.1, false, function() msg.post("level", "removeobj", {url = msg.url()}) end)
 	data.home = data.home - 1
 	if data.home <= 0 then
 		timer.delay(1, false, function() msg.post("gui#clear", "show") end)
@@ -30,7 +30,6 @@ local function move(self)
 	local pos = data.world2tile(go.get_position())
 	local t = tilemap.get_tile("level#screen", "main", pos.x, pos.y)
 	local v = self.dir[t]
-
 	if v == nil then
 		complete(self, t)
 	else

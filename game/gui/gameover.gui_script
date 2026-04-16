@@ -9,6 +9,7 @@ local function tryagain(self)
 	gui.set_enabled(self.node, false)
 	data.state = data.STATE_PLAYING
 	msg.post("level", "newlevel")
+	msg.post("main:/handler", "set_time_step", {factor = 1, mode = 0})
 end
 
 local function input(self, action_id, action)
@@ -25,6 +26,7 @@ function on_message(self, message_id, message, sender)
 	if message_id == hash("show") then
 		gui.set_enabled(self.node, true)
 		data.state = data.STATE_GAMEOVER
+		msg.post("main:/handler", "set_time_step", {factor = 0, mode = 0})
 	elseif message_id == hash("input") then
 		input(self, message.action_id, message.action)
 	end

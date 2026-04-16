@@ -22,30 +22,13 @@ nodes {
   inherit_alpha: true
 }
 nodes {
-  size {
-    x: 320.0
-    y: 180.0
-  }
-  color {
-    x: 0.34901962
-    y: 0.30588236
-    z: 0.43529412
-  }
-  type: TYPE_BOX
-  id: "tint"
-  parent: "container"
-  inherit_alpha: true
-  alpha: 0.8
-  size_mode: SIZE_MODE_AUTO
-}
-nodes {
   position {
     x: 117.0
-    y: 48.0
+    y: 42.0
   }
   size {
     x: 80.0
-    y: 80.0
+    y: 92.0
   }
   type: TYPE_BOX
   texture: "game/dialog"
@@ -62,7 +45,7 @@ nodes {
 nodes {
   position {
     x: 117.0
-    y: 72.0
+    y: 75.0
   }
   size {
     x: 80.0
@@ -94,7 +77,7 @@ nodes {
 nodes {
   position {
     x: 118.0
-    y: 49.0
+    y: 55.0
   }
   size {
     x: 60.0
@@ -132,8 +115,66 @@ nodes {
 }
 nodes {
   position {
+    x: 102.0
+    y: 34.0
+  }
+  size {
+    x: 28.0
+    y: 20.0
+  }
+  type: TYPE_BOX
+  texture: "game/button-yellow"
+  id: "sfx"
+  parent: "container"
+  inherit_alpha: true
+  slice9 {
+    x: 4.0
+    y: 4.0
+    z: 4.0
+    w: 4.0
+  }
+}
+nodes {
+  type: TYPE_BOX
+  texture: "game/sfx"
+  id: "sfx-icon"
+  parent: "sfx"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 134.0
+    y: 34.0
+  }
+  size {
+    x: 28.0
+    y: 20.0
+  }
+  type: TYPE_BOX
+  texture: "game/button-yellow"
+  id: "music"
+  parent: "container"
+  inherit_alpha: true
+  slice9 {
+    x: 4.0
+    y: 4.0
+    z: 4.0
+    w: 4.0
+  }
+}
+nodes {
+  type: TYPE_BOX
+  texture: "game/music"
+  id: "music-icon"
+  parent: "music"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
     x: 118.0
-    y: 28.0
+    y: 13.0
   }
   size {
     x: 60.0

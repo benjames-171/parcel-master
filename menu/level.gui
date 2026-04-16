@@ -3,6 +3,14 @@ fonts {
   name: "main"
   font: "/assets/font/main.font"
 }
+fonts {
+  name: "small"
+  font: "/assets/font/small.font"
+}
+textures {
+  name: "game"
+  texture: "/game/core/game.tilesource"
+}
 nodes {
   position {
     x: 160.0
@@ -15,7 +23,7 @@ nodes {
 }
 nodes {
   position {
-    y: 64.0
+    y: 70.0
   }
   size {
     x: 100.0
@@ -29,7 +37,7 @@ nodes {
   type: TYPE_TEXT
   text: "SELECT LEVEL"
   font: "main"
-  id: "controls"
+  id: "title"
   outline {
     x: 0.03137255
     y: 0.019607844
@@ -43,6 +51,620 @@ nodes {
   adjust_mode: ADJUST_MODE_STRETCH
   parent: "container"
   inherit_alpha: true
+}
+nodes {
+  position {
+    x: -32.0
+    y: 38.0
+  }
+  size {
+    x: 28.0
+    y: 32.0
+  }
+  type: TYPE_BOX
+  texture: "game/button-green"
+  id: "1"
+  parent: "container"
+  inherit_alpha: true
+  slice9 {
+    x: 4.0
+    y: 4.0
+    z: 4.0
+    w: 4.0
+  }
+}
+nodes {
+  position {
+    y: 4.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  color {
+    x: 0.92156863
+    y: 0.8352941
+    z: 0.7411765
+  }
+  type: TYPE_TEXT
+  text: "1"
+  font: "main"
+  id: "text1"
+  outline {
+    x: 0.03137255
+    y: 0.019607844
+    z: 0.05490196
+  }
+  shadow {
+    x: 0.03137255
+    y: 0.019607844
+    z: 0.05490196
+  }
+  adjust_mode: ADJUST_MODE_STRETCH
+  parent: "1"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    y: -12.0
+  }
+  type: TYPE_BOX
+  texture: "game/star0"
+  id: "stars1"
+  parent: "1"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    y: 38.0
+  }
+  size {
+    x: 28.0
+    y: 32.0
+  }
+  type: TYPE_BOX
+  texture: "game/button-green"
+  id: "2"
+  parent: "container"
+  inherit_alpha: true
+  slice9 {
+    x: 4.0
+    y: 4.0
+    z: 4.0
+    w: 4.0
+  }
+}
+nodes {
+  position {
+    y: 4.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  color {
+    x: 0.92156863
+    y: 0.8352941
+    z: 0.7411765
+  }
+  type: TYPE_TEXT
+  text: "2"
+  font: "main"
+  id: "text2"
+  outline {
+    x: 0.03137255
+    y: 0.019607844
+    z: 0.05490196
+  }
+  shadow {
+    x: 0.03137255
+    y: 0.019607844
+    z: 0.05490196
+  }
+  adjust_mode: ADJUST_MODE_STRETCH
+  parent: "2"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    y: -12.0
+  }
+  type: TYPE_BOX
+  texture: "game/star0"
+  id: "stars2"
+  parent: "2"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 32.0
+    y: 38.0
+  }
+  size {
+    x: 28.0
+    y: 32.0
+  }
+  type: TYPE_BOX
+  texture: "game/button-green"
+  id: "3"
+  parent: "container"
+  inherit_alpha: true
+  slice9 {
+    x: 4.0
+    y: 4.0
+    z: 4.0
+    w: 4.0
+  }
+}
+nodes {
+  position {
+    y: 4.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  color {
+    x: 0.92156863
+    y: 0.8352941
+    z: 0.7411765
+  }
+  type: TYPE_TEXT
+  text: "3"
+  font: "main"
+  id: "text3"
+  outline {
+    x: 0.03137255
+    y: 0.019607844
+    z: 0.05490196
+  }
+  shadow {
+    x: 0.03137255
+    y: 0.019607844
+    z: 0.05490196
+  }
+  adjust_mode: ADJUST_MODE_STRETCH
+  parent: "3"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    y: -12.0
+  }
+  type: TYPE_BOX
+  texture: "game/star0"
+  id: "stars3"
+  parent: "3"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -32.0
+    y: 2.0
+  }
+  size {
+    x: 28.0
+    y: 32.0
+  }
+  type: TYPE_BOX
+  texture: "game/button-green"
+  id: "4"
+  parent: "container"
+  inherit_alpha: true
+  slice9 {
+    x: 4.0
+    y: 4.0
+    z: 4.0
+    w: 4.0
+  }
+}
+nodes {
+  position {
+    y: 4.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  color {
+    x: 0.92156863
+    y: 0.8352941
+    z: 0.7411765
+  }
+  type: TYPE_TEXT
+  text: "4"
+  font: "main"
+  id: "text4"
+  outline {
+    x: 0.03137255
+    y: 0.019607844
+    z: 0.05490196
+  }
+  shadow {
+    x: 0.03137255
+    y: 0.019607844
+    z: 0.05490196
+  }
+  adjust_mode: ADJUST_MODE_STRETCH
+  parent: "4"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    y: -12.0
+  }
+  type: TYPE_BOX
+  texture: "game/star0"
+  id: "stars4"
+  parent: "4"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    y: 2.0
+  }
+  size {
+    x: 28.0
+    y: 32.0
+  }
+  type: TYPE_BOX
+  texture: "game/button-green"
+  id: "5"
+  parent: "container"
+  inherit_alpha: true
+  slice9 {
+    x: 4.0
+    y: 4.0
+    z: 4.0
+    w: 4.0
+  }
+}
+nodes {
+  position {
+    y: 4.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  color {
+    x: 0.92156863
+    y: 0.8352941
+    z: 0.7411765
+  }
+  type: TYPE_TEXT
+  text: "5"
+  font: "main"
+  id: "text5"
+  outline {
+    x: 0.03137255
+    y: 0.019607844
+    z: 0.05490196
+  }
+  shadow {
+    x: 0.03137255
+    y: 0.019607844
+    z: 0.05490196
+  }
+  adjust_mode: ADJUST_MODE_STRETCH
+  parent: "5"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    y: -12.0
+  }
+  type: TYPE_BOX
+  texture: "game/star0"
+  id: "stars5"
+  parent: "5"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 32.0
+    y: 2.0
+  }
+  size {
+    x: 28.0
+    y: 32.0
+  }
+  type: TYPE_BOX
+  texture: "game/button-green"
+  id: "6"
+  parent: "container"
+  inherit_alpha: true
+  slice9 {
+    x: 4.0
+    y: 4.0
+    z: 4.0
+    w: 4.0
+  }
+}
+nodes {
+  position {
+    y: 4.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  color {
+    x: 0.92156863
+    y: 0.8352941
+    z: 0.7411765
+  }
+  type: TYPE_TEXT
+  text: "6"
+  font: "main"
+  id: "text6"
+  outline {
+    x: 0.03137255
+    y: 0.019607844
+    z: 0.05490196
+  }
+  shadow {
+    x: 0.03137255
+    y: 0.019607844
+    z: 0.05490196
+  }
+  adjust_mode: ADJUST_MODE_STRETCH
+  parent: "6"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    y: -12.0
+  }
+  type: TYPE_BOX
+  texture: "game/star0"
+  id: "stars6"
+  parent: "6"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -32.0
+    y: -34.0
+  }
+  size {
+    x: 28.0
+    y: 32.0
+  }
+  type: TYPE_BOX
+  texture: "game/button-green"
+  id: "7"
+  parent: "container"
+  inherit_alpha: true
+  slice9 {
+    x: 4.0
+    y: 4.0
+    z: 4.0
+    w: 4.0
+  }
+}
+nodes {
+  position {
+    y: 4.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  color {
+    x: 0.92156863
+    y: 0.8352941
+    z: 0.7411765
+  }
+  type: TYPE_TEXT
+  text: "7"
+  font: "main"
+  id: "text7"
+  outline {
+    x: 0.03137255
+    y: 0.019607844
+    z: 0.05490196
+  }
+  shadow {
+    x: 0.03137255
+    y: 0.019607844
+    z: 0.05490196
+  }
+  adjust_mode: ADJUST_MODE_STRETCH
+  parent: "7"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    y: -12.0
+  }
+  type: TYPE_BOX
+  texture: "game/star0"
+  id: "stars7"
+  parent: "7"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    y: -34.0
+  }
+  size {
+    x: 28.0
+    y: 32.0
+  }
+  type: TYPE_BOX
+  texture: "game/button-green"
+  id: "8"
+  parent: "container"
+  inherit_alpha: true
+  slice9 {
+    x: 4.0
+    y: 4.0
+    z: 4.0
+    w: 4.0
+  }
+}
+nodes {
+  position {
+    y: 4.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  color {
+    x: 0.92156863
+    y: 0.8352941
+    z: 0.7411765
+  }
+  type: TYPE_TEXT
+  text: "8"
+  font: "main"
+  id: "text8"
+  outline {
+    x: 0.03137255
+    y: 0.019607844
+    z: 0.05490196
+  }
+  shadow {
+    x: 0.03137255
+    y: 0.019607844
+    z: 0.05490196
+  }
+  adjust_mode: ADJUST_MODE_STRETCH
+  parent: "8"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    y: -12.0
+  }
+  type: TYPE_BOX
+  texture: "game/star0"
+  id: "stars8"
+  parent: "8"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 32.0
+    y: -34.0
+  }
+  size {
+    x: 28.0
+    y: 32.0
+  }
+  type: TYPE_BOX
+  texture: "game/button-green"
+  id: "9"
+  parent: "container"
+  inherit_alpha: true
+  slice9 {
+    x: 4.0
+    y: 4.0
+    z: 4.0
+    w: 4.0
+  }
+}
+nodes {
+  position {
+    y: 4.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  color {
+    x: 0.92156863
+    y: 0.8352941
+    z: 0.7411765
+  }
+  type: TYPE_TEXT
+  text: "9"
+  font: "main"
+  id: "text9"
+  outline {
+    x: 0.03137255
+    y: 0.019607844
+    z: 0.05490196
+  }
+  shadow {
+    x: 0.03137255
+    y: 0.019607844
+    z: 0.05490196
+  }
+  adjust_mode: ADJUST_MODE_STRETCH
+  parent: "9"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    y: -12.0
+  }
+  type: TYPE_BOX
+  texture: "game/star0"
+  id: "stars9"
+  parent: "9"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    y: -70.0
+  }
+  size {
+    x: 60.0
+    y: 18.0
+  }
+  type: TYPE_BOX
+  texture: "game/button-blue"
+  id: "back"
+  parent: "container"
+  inherit_alpha: true
+  slice9 {
+    x: 4.0
+    y: 4.0
+    z: 4.0
+    w: 4.0
+  }
+}
+nodes {
+  size {
+    x: 40.0
+    y: 8.0
+  }
+  color {
+    x: 0.92156863
+    y: 0.8352941
+    z: 0.7411765
+  }
+  type: TYPE_TEXT
+  text: "back"
+  font: "small"
+  id: "text"
+  outline {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+  shadow {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+  adjust_mode: ADJUST_MODE_STRETCH
+  parent: "back"
+  inherit_alpha: true
+  outline_alpha: 0.0
+  shadow_alpha: 0.0
 }
 material: "/builtins/materials/gui.material"
 adjust_reference: ADJUST_REFERENCE_PARENT

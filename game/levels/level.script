@@ -20,12 +20,15 @@ local function tilecopy(x, y, layer)
 end
 
 local function setuplevel(self)
-	data.parcels = 1 --10 + (data.level * 2) 
+	data.parcels = 10 + (data.level * 2) 
 	data.home = data.parcels
 	data.stars = 3
+	data.state = data.STATE_PLAYING
 	if self.obj then
 		for _,v in pairs(self.obj) do
-			go.delete(v)
+			if go.exists(v) then
+				go.delete(v)
+			end
 		end
 	end
 	self.obj = {}
@@ -66,5 +69,14 @@ function on_message(self, message_id, message, sender)
 	if message_id == hash("newlevel") then
 		setuplevel(self)
 		parse(self)
+	elseif message_id == hash("addobj") then
+		table.insert(self.obj, message.url)
+	elseif message_id == hash("removeobj") then
+		for k,v in pairs(self.obj) do
+			if v == message.url then
+				go.delete(v)
+				table.remove(self.obj, k)
+			end
+		end
 	end
 end

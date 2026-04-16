@@ -2,16 +2,13 @@ local M = {}
 
 M.STATE_NULL = -1
 M.STATE_MENU = 1
-M.STATE_CONTROLS = 2
-M.STATE_SETTINGS = 3
-M.STATE_CREDITS = 4
+M.STATE_LEVEL = 2
+M.STATE_CREDITS = 3
 
-M.STATE_GAME = 100
-M.STATE_PLAYING = 101
-M.STATE_PAUSE = 102
-M.STATE_CLEAR = 103
-M.STATE_GAMEOVER = 104
-M.STATE_COMPLETE = 105
+M.STATE_PLAYING = 10
+M.STATE_PAUSE = 11
+M.STATE_CLEAR = 12
+M.STATE_GAMEOVER = 13
 
 M.state = M.STATE_MENU
 
@@ -19,10 +16,10 @@ M.SCR_W = 0
 M.SCR_H = 0
 M.TILE = 16
 M.PIXEL = 4
-M.MAX_LEVELS = 10
+M.NUM_LEVELS = 9
 M.GATE = 1/25
 
-M.APP_NAME = "appname"
+M.APP_NAME = "parcel-master"
 M.FILE_NAME = "game.sav"
 
 M.level = 1
@@ -30,12 +27,15 @@ M.time = 0
 M.parcels = 0
 M.home = 0
 M.stars = 0
+M.diff = 0
 M.gate = {}
+M.currentsong = nil
 M.vp = vmath.vector4()
 
 M.save = {
-	sfx = 7,
-	music = 7,
+	sfx = 1,
+	music = 1,
+	progress = {},
 	fullscreen = false,
 }
 

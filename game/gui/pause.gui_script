@@ -11,13 +11,28 @@ local function close(self)
 	msg.post("main:/handler", "set_time_step", {factor = 1, mode = 0})
 end
 
+local function display(self)
+	gui.set_alpha(gui.get_node("sfx-icon"), data.save.sfx + 0.2)
+	gui.set_alpha(gui.get_node("music-icon"), data.save.music + 0.2)
+end
+
 local function input(self, action_id, action)
 	if action_id == hash("action") and action.pressed then
 		if gui.pick_node(gui.get_node("resume"), action.x, action.y) then
 			close(self)
+			data.sound("menu-select")
+		elseif gui.pick_node(gui.get_node("sfx"), action.x, action.y) then
+			data.save.sfx = 1 - data.save.sfx
+			display(self)
+			data.sound("menu-select")
+		elseif gui.pick_node(gui.get_node("music"), action.x, action.y) then
+			data.save.music = 1 - data.save.music
+			display(self)
+			data.sound("menu-select")
 		elseif gui.pick_node(gui.get_node("quit"), action.x, action.y) then
 			msg.post("main:/handler", "set_time_step", {factor = 1, mode = 0})
 			msg.post("player", "quit")
+			data.sound("menu-select")
 		end
 	elseif action_id == hash("exit") and action.pressed then
 		close(self)
@@ -28,6 +43,7 @@ function on_message(self, message_id, message, sender)
 	if message_id == hash("show") then
 		gui.set_enabled(self.node, true)
 		data.state = data.STATE_PAUSE
+		display(self)
 		msg.post("main:/handler", "set_time_step", {factor = 0, mode = 0})
 	elseif message_id == hash("input") then
 		input(self, message.action_id, message.action)

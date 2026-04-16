@@ -1,13 +1,14 @@
 local data = require "main.data"
 
 function update(self)
-	gui.set_text(gui.get_node("parcels"), tostring(data.parcels))
+	gui.set_text(gui.get_node("parcels"), tostring(data.home))
 end
 
 local function input(self, action_id, action)
 	if action_id == hash("action") and action.pressed then
 		if gui.pick_node(gui.get_node("menu"), action.x, action.y) then
 			msg.post("#pause", "show")
+			data.sound("menu-select")
 		end
 	end
 end

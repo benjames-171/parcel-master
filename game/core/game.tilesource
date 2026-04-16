@@ -194,791 +194,791 @@ convex_hulls {
 }
 convex_hulls {
   index: 115
-  count: 7
+  count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 122
-  count: 8
+  index: 115
+  count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 130
+  index: 115
   count: 11
+  collision_group: ""
+}
+convex_hulls {
+  index: 126
+  count: 11
+  collision_group: ""
+}
+convex_hulls {
+  index: 137
+  count: 4
   collision_group: ""
 }
 convex_hulls {
   index: 141
-  count: 11
+  count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 152
+  index: 141
   count: 4
   collision_group: ""
 }
 convex_hulls {
-  index: 156
-  count: 0
-  collision_group: ""
-}
-convex_hulls {
-  index: 156
+  index: 145
   count: 4
   collision_group: ""
 }
 convex_hulls {
-  index: 160
+  index: 149
   count: 4
   collision_group: ""
 }
 convex_hulls {
-  index: 164
+  index: 153
+  count: 0
+  collision_group: ""
+}
+convex_hulls {
+  index: 153
+  count: 0
+  collision_group: ""
+}
+convex_hulls {
+  index: 153
+  count: 0
+  collision_group: ""
+}
+convex_hulls {
+  index: 153
+  count: 0
+  collision_group: ""
+}
+convex_hulls {
+  index: 153
+  count: 0
+  collision_group: ""
+}
+convex_hulls {
+  index: 153
+  count: 0
+  collision_group: ""
+}
+convex_hulls {
+  index: 153
+  count: 0
+  collision_group: ""
+}
+convex_hulls {
+  index: 153
+  count: 8
+  collision_group: ""
+}
+convex_hulls {
+  index: 161
+  count: 8
+  collision_group: ""
+}
+convex_hulls {
+  index: 169
   count: 4
   collision_group: ""
 }
 convex_hulls {
-  index: 168
-  count: 0
-  collision_group: ""
-}
-convex_hulls {
-  index: 168
-  count: 0
-  collision_group: ""
-}
-convex_hulls {
-  index: 168
-  count: 0
-  collision_group: ""
-}
-convex_hulls {
-  index: 168
-  count: 0
-  collision_group: ""
-}
-convex_hulls {
-  index: 168
-  count: 0
-  collision_group: ""
-}
-convex_hulls {
-  index: 168
-  count: 0
-  collision_group: ""
-}
-convex_hulls {
-  index: 168
-  count: 0
-  collision_group: ""
-}
-convex_hulls {
-  index: 168
-  count: 0
-  collision_group: ""
-}
-convex_hulls {
-  index: 168
-  count: 0
-  collision_group: ""
-}
-convex_hulls {
-  index: 168
+  index: 173
   count: 4
   collision_group: ""
 }
 convex_hulls {
-  index: 172
+  index: 177
   count: 4
   collision_group: ""
 }
 convex_hulls {
-  index: 176
+  index: 181
   count: 4
   collision_group: ""
 }
 convex_hulls {
-  index: 180
+  index: 185
   count: 4
   collision_group: ""
 }
 convex_hulls {
-  index: 184
+  index: 189
   count: 4
   collision_group: ""
 }
 convex_hulls {
-  index: 188
+  index: 193
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 188
+  index: 193
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 188
+  index: 193
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 188
+  index: 193
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 188
-  count: 0
-  collision_group: ""
-}
-convex_hulls {
-  index: 188
-  count: 0
-  collision_group: ""
-}
-convex_hulls {
-  index: 188
-  count: 0
-  collision_group: ""
-}
-convex_hulls {
-  index: 188
-  count: 0
-  collision_group: ""
-}
-convex_hulls {
-  index: 188
-  count: 0
-  collision_group: ""
-}
-convex_hulls {
-  index: 188
+  index: 193
   count: 4
   collision_group: ""
 }
 convex_hulls {
-  index: 192
+  index: 197
   count: 4
   collision_group: ""
 }
 convex_hulls {
-  index: 196
+  index: 201
   count: 4
   collision_group: ""
 }
 convex_hulls {
-  index: 200
+  index: 205
+  count: 4
+  collision_group: ""
+}
+convex_hulls {
+  index: 209
+  count: 4
+  collision_group: ""
+}
+convex_hulls {
+  index: 213
+  count: 4
+  collision_group: ""
+}
+convex_hulls {
+  index: 217
+  count: 4
+  collision_group: ""
+}
+convex_hulls {
+  index: 221
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 200
+  index: 221
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 200
+  index: 221
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 200
+  index: 221
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 200
+  index: 221
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 200
+  index: 221
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 200
+  index: 221
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 200
+  index: 221
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 200
+  index: 221
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 200
+  index: 221
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 200
+  index: 221
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 200
+  index: 221
   count: 6
   collision_group: ""
 }
 convex_hulls {
-  index: 206
+  index: 227
   count: 4
   collision_group: ""
 }
 convex_hulls {
-  index: 210
+  index: 231
   count: 6
   collision_group: ""
 }
 convex_hulls {
-  index: 216
+  index: 237
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 216
+  index: 237
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 216
+  index: 237
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 216
+  index: 237
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 216
+  index: 237
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 216
+  index: 237
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 216
+  index: 237
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 216
+  index: 237
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 216
+  index: 237
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 216
+  index: 237
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 216
+  index: 237
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 216
+  index: 237
   count: 4
   collision_group: ""
 }
 convex_hulls {
-  index: 220
+  index: 241
   count: 4
   collision_group: ""
 }
 convex_hulls {
-  index: 224
+  index: 245
   count: 4
   collision_group: ""
 }
 convex_hulls {
-  index: 228
+  index: 249
   count: 4
   collision_group: ""
 }
 convex_hulls {
-  index: 232
+  index: 253
   count: 4
   collision_group: ""
 }
 convex_hulls {
-  index: 236
+  index: 257
   count: 4
   collision_group: ""
 }
 convex_hulls {
-  index: 240
+  index: 261
   count: 4
   collision_group: ""
 }
 convex_hulls {
-  index: 244
+  index: 265
   count: 4
   collision_group: ""
 }
 convex_hulls {
-  index: 248
+  index: 269
   count: 4
   collision_group: ""
 }
 convex_hulls {
-  index: 252
+  index: 273
   count: 4
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 256
+  index: 277
   count: 4
   collision_group: ""
 }
 convex_hulls {
-  index: 260
+  index: 281
   count: 4
   collision_group: ""
 }
 convex_hulls {
-  index: 264
+  index: 285
   count: 4
   collision_group: ""
 }
 convex_hulls {
-  index: 268
+  index: 289
   count: 4
   collision_group: ""
 }
@@ -998,6 +998,12 @@ animations {
   id: "button-red"
   start_tile: 61
   end_tile: 61
+  playback: PLAYBACK_NONE
+}
+animations {
+  id: "button-yellow"
+  start_tile: 62
+  end_tile: 62
   playback: PLAYBACK_NONE
 }
 animations {
@@ -1031,6 +1037,12 @@ animations {
   playback: PLAYBACK_NONE
 }
 animations {
+  id: "music"
+  start_tile: 55
+  end_tile: 55
+  playback: PLAYBACK_NONE
+}
+animations {
   id: "parcel-1"
   start_tile: 15
   end_tile: 15
@@ -1061,15 +1073,33 @@ animations {
   playback: PLAYBACK_NONE
 }
 animations {
-  id: "star"
-  start_tile: 39
-  end_tile: 39
+  id: "sfx"
+  start_tile: 56
+  end_tile: 56
   playback: PLAYBACK_NONE
 }
 animations {
-  id: "star-slot"
-  start_tile: 40
-  end_tile: 40
+  id: "star0"
+  start_tile: 67
+  end_tile: 67
+  playback: PLAYBACK_NONE
+}
+animations {
+  id: "star1"
+  start_tile: 68
+  end_tile: 68
+  playback: PLAYBACK_NONE
+}
+animations {
+  id: "star2"
+  start_tile: 69
+  end_tile: 69
+  playback: PLAYBACK_NONE
+}
+animations {
+  id: "star3"
+  start_tile: 70
+  end_tile: 70
   playback: PLAYBACK_NONE
 }
 animations {
