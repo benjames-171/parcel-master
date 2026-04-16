@@ -14,6 +14,7 @@ local function complete(self, t)
 		data.stars = data.clamp(data.stars - 1, 0, 3)
 		if data.stars == 0 then
 			msg.post("gui#gameover", "show")
+			msg.post("level", "stopmove")
 		end
 	end
 	factory.create("#thumb-fac", nil, nil, {correct = correct})
@@ -52,7 +53,7 @@ function init(self)
 		[47] = vmath.vector3(0, 1, 0),
 		[57] = vmath.vector3(0, 1, 0),
 		[58] = vmath.vector3(-1, 0, 0),
-		[59] = vmath.vector3(-1, 0, 0)
+		[59] = vmath.vector3(0, 1, 0)
 	}
 	move(self)
 

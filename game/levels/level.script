@@ -78,5 +78,9 @@ function on_message(self, message_id, message, sender)
 				table.remove(self.obj, k)
 			end
 		end
+	elseif message_id == hash("stopmove") then
+		for k,v in pairs(self.obj) do
+			go.cancel_animations(v, "position")
+		end
 	end
 end

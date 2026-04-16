@@ -31,10 +31,18 @@ local function input(self, action_id, action)
 	end
 end
 
+local function show(self)
+	ui.show(self.node)
+	data.state = data.STATE_LEVEL
+	local anim = {[1] = "green", [2] = "yellow", [3] = "red"}
+	for n = 1, MENU_LEN do
+		gui.play_flipbook(gui.get_node(tostring(n)), "button-"..anim[data.diff])
+	end
+end
+
 function on_message(self, message_id, message, sender)
 	if message_id == hash("show") then
-		ui.show(self.node)
-		data.state = data.STATE_LEVEL
+		show(self)
 	elseif message_id == hash("input") then
 		input(self, message.action_id, message.action)
 	end

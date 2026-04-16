@@ -30,9 +30,9 @@ nodes {
     y: 16.0
   }
   color {
-    x: 0.89411765
-    y: 0.7294118
-    z: 0.19607843
+    x: 0.92156863
+    y: 0.8352941
+    z: 0.7411765
   }
   type: TYPE_TEXT
   text: "CREDITS"
@@ -68,7 +68,7 @@ nodes {
   type: TYPE_TEXT
   text: "developed by\n"
   "music by\n"
-  "made with"
+  "game engine"
   font: "main"
   id: "left"
   pivot: PIVOT_E
@@ -159,7 +159,7 @@ nodes {
     y: -64.0
   }
   size {
-    x: 60.0
+    x: 48.0
     y: 18.0
   }
   type: TYPE_BOX
