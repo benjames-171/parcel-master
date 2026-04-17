@@ -2,7 +2,6 @@ script: "/main/shutter.gui_script"
 nodes {
   type: TYPE_BOX
   id: "container"
-  adjust_mode: ADJUST_MODE_STRETCH
   inherit_alpha: true
 }
 nodes {
@@ -18,7 +17,6 @@ nodes {
   type: TYPE_BOX
   id: "shutter"
   pivot: PIVOT_SW
-  adjust_mode: ADJUST_MODE_STRETCH
   parent: "container"
   inherit_alpha: true
   enabled: false

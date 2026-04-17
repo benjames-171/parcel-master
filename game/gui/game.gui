@@ -57,7 +57,6 @@ nodes {
     y: 0.019607844
     z: 0.05490196
   }
-  adjust_mode: ADJUST_MODE_STRETCH
   parent: "parcel-icon"
   inherit_alpha: true
 }

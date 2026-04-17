@@ -22,7 +22,6 @@ nodes {
   }
   type: TYPE_BOX
   id: "container"
-  adjust_mode: ADJUST_MODE_STRETCH
   inherit_alpha: true
 }
 nodes {
@@ -81,7 +80,6 @@ nodes {
     y: 0.019607844
     z: 0.05490196
   }
-  adjust_mode: ADJUST_MODE_STRETCH
   parent: "1"
   inherit_alpha: true
 }
@@ -129,7 +127,6 @@ nodes {
     y: 0.019607844
     z: 0.05490196
   }
-  adjust_mode: ADJUST_MODE_STRETCH
   parent: "2"
   inherit_alpha: true
 }
@@ -178,7 +175,6 @@ nodes {
     y: 0.019607844
     z: 0.05490196
   }
-  adjust_mode: ADJUST_MODE_STRETCH
   parent: "3"
   inherit_alpha: true
 }
@@ -226,7 +222,6 @@ nodes {
     y: 1.0
     z: 1.0
   }
-  adjust_mode: ADJUST_MODE_STRETCH
   parent: "4"
   inherit_alpha: true
   outline_alpha: 0.0
