@@ -15,7 +15,7 @@ layers {
 }
 layers {
   id: "top"
-  z: 0.5
+  z: 0.0
 }
 layers {
   id: "control"

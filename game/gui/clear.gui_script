@@ -15,7 +15,13 @@ end
 local function input(self, action_id, action)
 	if action_id == hash("action") and action.pressed then
 		if gui.pick_node(gui.get_node("nextlevel"), action.x, action.y) then
-			nextlevel(self)
+			data.level = data.level + 1
+			if data.level <= data.NUM_LEVELS then
+				nextlevel(self)
+			else
+				msg.post("main:/handler", "show_game")
+			end
+			data.sound("menu-select")
 		end
 	end
 end
@@ -36,6 +42,9 @@ local function show(self)
 		end
 		data.progress()
 		data.savegamefile()
+	end
+	if data.level >= data.NUM_LEVELS then
+		gui.set_text(gui.get_node("text"), "EXIT")
 	end
 end
 
