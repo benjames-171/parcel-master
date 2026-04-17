@@ -21,7 +21,6 @@ function init(self)
 	ui.init(self.node)
 	self.button = {}
 	self.grey = {}
-	pprint(data.save.progress)
 	for n = 1, MENU_LEN do
 		self.button[n] = gui.get_node(tostring(n))
 	end
