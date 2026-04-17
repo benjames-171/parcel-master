@@ -4,8 +4,10 @@ local WIDTH = 20
 local HEIGHT = 11
 
 local function tilecopy(x, y, layer)
-	local tile = tilemap.get_tile("#levels", layer, x + ((data.diff - 1) * (WIDTH + 4)), y + ((data.level - 1) * (HEIGHT + 4)))
-	local info = tilemap.get_tile_info("#levels", layer, x, y)
+	local sx = x + ((data.diff - 1) * (WIDTH + 4))
+	local sy = y + ((data.level - 1) * (HEIGHT + 4))
+	local tile = tilemap.get_tile("#levels", layer, sx, sy)
+	local info = tilemap.get_tile_info("#levels", layer, sx, sy)
 	local transform = 0
 
 	if info.h_flip then transform = tilemap.H_FLIP end
@@ -87,7 +89,7 @@ local function parse(self)
 			elseif m == 43 then
 				obj = factory.create("#anim-fac", pos)
 				go.set(obj, "euler.z", 90)
-			elseif m == 35 then
+			elseif m == 45 then
 				obj = factory.create("#anim-fac", pos)
 				go.set(obj, "euler.z", 270)
 			elseif m == 58 then

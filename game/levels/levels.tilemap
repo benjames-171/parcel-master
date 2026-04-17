@@ -38,6 +38,11 @@ layers {
     tile: 42
   }
   cell {
+    x: 65
+    y: -1
+    tile: 42
+  }
+  cell {
     x: 0
     y: 0
     tile: 11
@@ -279,17 +284,19 @@ layers {
   cell {
     x: 55
     y: 0
-    tile: 27
+    tile: 24
   }
   cell {
     x: 56
     y: 0
-    tile: 27
+    tile: 73
+    v_flip: 1
   }
   cell {
     x: 57
     y: 0
-    tile: 27
+    tile: 24
+    h_flip: 1
   }
   cell {
     x: 58
@@ -329,7 +336,7 @@ layers {
   cell {
     x: 65
     y: 0
-    tile: 27
+    tile: 42
   }
   cell {
     x: 66
@@ -374,6 +381,66 @@ layers {
     tile: 26
   }
   cell {
+    x: 49
+    y: 1
+    tile: 34
+  }
+  cell {
+    x: 50
+    y: 1
+    tile: 36
+  }
+  cell {
+    x: 51
+    y: 1
+    tile: 33
+  }
+  cell {
+    x: 53
+    y: 1
+    tile: 34
+  }
+  cell {
+    x: 54
+    y: 1
+    tile: 34
+  }
+  cell {
+    x: 56
+    y: 1
+    tile: 44
+  }
+  cell {
+    x: 59
+    y: 1
+    tile: 34
+  }
+  cell {
+    x: 60
+    y: 1
+    tile: 34
+  }
+  cell {
+    x: 61
+    y: 1
+    tile: 36
+  }
+  cell {
+    x: 62
+    y: 1
+    tile: 36
+  }
+  cell {
+    x: 63
+    y: 1
+    tile: 33
+  }
+  cell {
+    x: 65
+    y: 1
+    tile: 42
+  }
+  cell {
     x: 67
     y: 1
     tile: 26
@@ -412,6 +479,71 @@ layers {
     tile: 26
   }
   cell {
+    x: 49
+    y: 2
+    tile: 33
+  }
+  cell {
+    x: 50
+    y: 2
+    tile: 34
+  }
+  cell {
+    x: 51
+    y: 2
+    tile: 35
+  }
+  cell {
+    x: 53
+    y: 2
+    tile: 34
+  }
+  cell {
+    x: 54
+    y: 2
+    tile: 33
+  }
+  cell {
+    x: 56
+    y: 2
+    tile: 44
+  }
+  cell {
+    x: 57
+    y: 2
+    tile: 84
+  }
+  cell {
+    x: 58
+    y: 2
+    tile: 85
+  }
+  cell {
+    x: 59
+    y: 2
+    tile: 86
+  }
+  cell {
+    x: 61
+    y: 2
+    tile: 36
+  }
+  cell {
+    x: 62
+    y: 2
+    tile: 36
+  }
+  cell {
+    x: 63
+    y: 2
+    tile: 33
+  }
+  cell {
+    x: 65
+    y: 2
+    tile: 42
+  }
+  cell {
     x: 67
     y: 2
     tile: 26
@@ -448,6 +580,46 @@ layers {
     x: 48
     y: 3
     tile: 26
+  }
+  cell {
+    x: 56
+    y: 3
+    tile: 56
+  }
+  cell {
+    x: 57
+    y: 3
+    tile: 57
+  }
+  cell {
+    x: 58
+    y: 3
+    tile: 57
+  }
+  cell {
+    x: 59
+    y: 3
+    tile: 58
+  }
+  cell {
+    x: 61
+    y: 3
+    tile: 33
+  }
+  cell {
+    x: 62
+    y: 3
+    tile: 33
+  }
+  cell {
+    x: 63
+    y: 3
+    tile: 34
+  }
+  cell {
+    x: 65
+    y: 3
+    tile: 42
   }
   cell {
     x: 67
@@ -526,6 +698,76 @@ layers {
     x: 48
     y: 4
     tile: 26
+  }
+  cell {
+    x: 50
+    y: 4
+    tile: 84
+  }
+  cell {
+    x: 51
+    y: 4
+    tile: 85
+  }
+  cell {
+    x: 52
+    y: 4
+    tile: 85
+  }
+  cell {
+    x: 53
+    y: 4
+    tile: 85
+  }
+  cell {
+    x: 54
+    y: 4
+    tile: 85
+  }
+  cell {
+    x: 55
+    y: 4
+    tile: 86
+  }
+  cell {
+    x: 56
+    y: 4
+    tile: 42
+  }
+  cell {
+    x: 59
+    y: 4
+    tile: 44
+  }
+  cell {
+    x: 60
+    y: 4
+    tile: 84
+  }
+  cell {
+    x: 61
+    y: 4
+    tile: 85
+  }
+  cell {
+    x: 62
+    y: 4
+    tile: 85
+  }
+  cell {
+    x: 63
+    y: 4
+    tile: 85
+  }
+  cell {
+    x: 64
+    y: 4
+    tile: 86
+  }
+  cell {
+    x: 65
+    y: 4
+    tile: 42
   }
   cell {
     x: 67
@@ -606,6 +848,81 @@ layers {
     tile: 26
   }
   cell {
+    x: 49
+    y: 5
+    tile: 47
+  }
+  cell {
+    x: 50
+    y: 5
+    tile: 45
+  }
+  cell {
+    x: 51
+    y: 5
+    tile: 29
+  }
+  cell {
+    x: 52
+    y: 5
+    tile: 29
+  }
+  cell {
+    x: 53
+    y: 5
+    tile: 29
+  }
+  cell {
+    x: 54
+    y: 5
+    tile: 29
+  }
+  cell {
+    x: 55
+    y: 5
+    tile: 29
+  }
+  cell {
+    x: 56
+    y: 5
+    tile: 42
+  }
+  cell {
+    x: 59
+    y: 5
+    tile: 44
+  }
+  cell {
+    x: 60
+    y: 5
+    tile: 57
+  }
+  cell {
+    x: 61
+    y: 5
+    tile: 57
+  }
+  cell {
+    x: 62
+    y: 5
+    tile: 57
+  }
+  cell {
+    x: 63
+    y: 5
+    tile: 57
+  }
+  cell {
+    x: 64
+    y: 5
+    tile: 57
+  }
+  cell {
+    x: 65
+    y: 5
+    tile: 32
+  }
+  cell {
     x: 67
     y: 5
     tile: 26
@@ -649,6 +966,56 @@ layers {
     tile: 26
   }
   cell {
+    x: 49
+    y: 6
+    tile: 33
+  }
+  cell {
+    x: 50
+    y: 6
+    tile: 44
+  }
+  cell {
+    x: 56
+    y: 6
+    tile: 42
+  }
+  cell {
+    x: 57
+    y: 6
+    tile: 84
+  }
+  cell {
+    x: 58
+    y: 6
+    tile: 86
+  }
+  cell {
+    x: 59
+    y: 6
+    tile: 44
+  }
+  cell {
+    x: 62
+    y: 6
+    tile: 47
+  }
+  cell {
+    x: 63
+    y: 6
+    tile: 48
+  }
+  cell {
+    x: 64
+    y: 6
+    tile: 48
+  }
+  cell {
+    x: 65
+    y: 6
+    tile: 47
+  }
+  cell {
     x: 67
     y: 6
     tile: 26
@@ -692,6 +1059,71 @@ layers {
     tile: 26
   }
   cell {
+    x: 49
+    y: 7
+    tile: 34
+  }
+  cell {
+    x: 50
+    y: 7
+    tile: 44
+  }
+  cell {
+    x: 52
+    y: 7
+    tile: 48
+  }
+  cell {
+    x: 53
+    y: 7
+    tile: 48
+  }
+  cell {
+    x: 54
+    y: 7
+    tile: 47
+  }
+  cell {
+    x: 56
+    y: 7
+    tile: 28
+  }
+  cell {
+    x: 57
+    y: 7
+    tile: 29
+  }
+  cell {
+    x: 58
+    y: 7
+    tile: 29
+  }
+  cell {
+    x: 59
+    y: 7
+    tile: 30
+  }
+  cell {
+    x: 62
+    y: 7
+    tile: 33
+  }
+  cell {
+    x: 63
+    y: 7
+    tile: 34
+  }
+  cell {
+    x: 64
+    y: 7
+    tile: 36
+  }
+  cell {
+    x: 65
+    y: 7
+    tile: 35
+  }
+  cell {
     x: 67
     y: 7
     tile: 26
@@ -733,6 +1165,71 @@ layers {
     x: 48
     y: 8
     tile: 26
+  }
+  cell {
+    x: 49
+    y: 8
+    tile: 34
+  }
+  cell {
+    x: 50
+    y: 8
+    tile: 44
+  }
+  cell {
+    x: 52
+    y: 8
+    tile: 34
+  }
+  cell {
+    x: 53
+    y: 8
+    tile: 34
+  }
+  cell {
+    x: 54
+    y: 8
+    tile: 35
+  }
+  cell {
+    x: 55
+    y: 8
+    tile: 48
+  }
+  cell {
+    x: 56
+    y: 8
+    tile: 48
+  }
+  cell {
+    x: 57
+    y: 8
+    tile: 47
+  }
+  cell {
+    x: 59
+    y: 8
+    tile: 42
+  }
+  cell {
+    x: 62
+    y: 8
+    tile: 35
+  }
+  cell {
+    x: 63
+    y: 8
+    tile: 35
+  }
+  cell {
+    x: 64
+    y: 8
+    tile: 33
+  }
+  cell {
+    x: 65
+    y: 8
+    tile: 33
   }
   cell {
     x: 67
@@ -950,62 +1447,62 @@ layers {
   cell {
     x: 49
     y: 9
-    tile: 85
+    tile: 33
   }
   cell {
     x: 50
     y: 9
-    tile: 85
+    tile: 44
   }
   cell {
     x: 51
     y: 9
-    tile: 85
+    tile: 84
   }
   cell {
     x: 52
     y: 9
-    tile: 85
+    tile: 33
   }
   cell {
     x: 53
     y: 9
-    tile: 85
+    tile: 35
   }
   cell {
     x: 54
     y: 9
-    tile: 85
+    tile: 33
   }
   cell {
     x: 55
     y: 9
-    tile: 85
+    tile: 34
   }
   cell {
     x: 56
     y: 9
-    tile: 85
+    tile: 34
   }
   cell {
     x: 57
     y: 9
-    tile: 85
+    tile: 35
   }
   cell {
     x: 58
     y: 9
-    tile: 85
+    tile: 86
   }
   cell {
     x: 59
     y: 9
-    tile: 85
+    tile: 42
   }
   cell {
     x: 60
     y: 9
-    tile: 85
+    tile: 84
   }
   cell {
     x: 61
@@ -1015,27 +1512,27 @@ layers {
   cell {
     x: 62
     y: 9
-    tile: 85
+    tile: 33
   }
   cell {
     x: 63
     y: 9
-    tile: 85
+    tile: 35
   }
   cell {
     x: 64
     y: 9
-    tile: 85
+    tile: 35
   }
   cell {
     x: 65
     y: 9
-    tile: 85
+    tile: 33
   }
   cell {
     x: 66
     y: 9
-    tile: 85
+    tile: 86
   }
   cell {
     x: 67
@@ -1256,17 +1753,18 @@ layers {
   cell {
     x: 49
     y: 10
-    tile: 13
+    tile: 10
   }
   cell {
     x: 50
     y: 10
-    tile: 13
+    tile: 44
   }
   cell {
     x: 51
     y: 10
-    tile: 13
+    tile: 10
+    h_flip: 1
   }
   cell {
     x: 52
@@ -1301,17 +1799,18 @@ layers {
   cell {
     x: 58
     y: 10
-    tile: 13
+    tile: 10
   }
   cell {
     x: 59
     y: 10
-    tile: 13
+    tile: 70
   }
   cell {
     x: 60
     y: 10
-    tile: 13
+    tile: 10
+    h_flip: 1
   }
   cell {
     x: 61
@@ -1562,7 +2061,7 @@ layers {
   cell {
     x: 50
     y: 11
-    tile: 27
+    tile: 44
   }
   cell {
     x: 51
@@ -14266,6 +14765,11 @@ layers {
     y: 9
     tile: 34
   }
+  cell {
+    x: 50
+    y: 11
+    tile: 27
+  }
 }
 layers {
   id: "control"
@@ -14276,9 +14780,29 @@ layers {
     tile: 5
   }
   cell {
+    x: 65
+    y: -2
+    tile: 5
+  }
+  cell {
+    x: 56
+    y: 3
+    tile: 106
+  }
+  cell {
     x: 9
     y: 5
     tile: 107
+  }
+  cell {
+    x: 59
+    y: 7
+    tile: 106
+  }
+  cell {
+    x: 50
+    y: 12
+    tile: 7
   }
 }
 material: "/builtins/materials/tile_map.material"

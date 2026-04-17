@@ -8,10 +8,12 @@ local function spawn(self)
 		if data.parcels <= 0 then
 			timer.cancel(self.handle)
 		end
-		local pos = go.get_position()
-		pos = pos + self.move * data.TILE
-		local obj = factory.create("#parcel-fac", pos, nil, {move = self.dir})
-		msg.post("level", "addobj", {url = obj})
+		if data.parcels >= 0 then
+			local pos = go.get_position()
+			pos = pos + self.move * data.TILE
+			local obj = factory.create("#parcel-fac", pos, nil, {move = self.dir})
+			msg.post("level", "addobj", {url = obj})
+		end
 	end
 end
 

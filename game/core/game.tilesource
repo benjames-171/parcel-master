@@ -1080,8 +1080,8 @@ animations {
 }
 animations {
   id: "parcel-4"
-  start_tile: 17
-  end_tile: 17
+  start_tile: 18
+  end_tile: 18
   playback: PLAYBACK_NONE
 }
 animations {

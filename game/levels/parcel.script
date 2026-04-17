@@ -21,9 +21,12 @@ local function complete(self, t)
 	go.animate(".", "scale", go.PLAYBACK_ONCE_FORWARD, 0, go.EASING_LINEAR, 0.3)
 	go.animate("#sprite", "tint.w", go.PLAYBACK_ONCE_FORWARD, 0, go.EASING_LINEAR, 0.3)
 	timer.delay(1.1, false, function() msg.post("level", "removeobj", {url = msg.url()}) end)
-	data.home = data.home - 1
-	if data.home <= 0 then
-		timer.delay(1, false, function() msg.post("gui#clear", "show") end)
+
+	if data.home > 0 then
+		data.home = data.home - 1
+		if data.home <= 0 then
+			timer.delay(1, false, function() msg.post("gui#clear", "show") end)
+		end
 	end
 end
 
@@ -53,7 +56,7 @@ function init(self)
 		[47] = vmath.vector3(0, 1, 0),
 		[57] = vmath.vector3(0, 1, 0),
 		[58] = vmath.vector3(-1, 0, 0),
-		[59] = vmath.vector3(0, 1, 0)
+		[59] = vmath.vector3(-1, 0, 0)
 	}
 	move(self)
 
