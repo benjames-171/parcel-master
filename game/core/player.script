@@ -7,7 +7,11 @@ end
 
 local function input_playing(self, action_id, action)
 	if action_id == hash("action") and action.pressed then
-		local pos = vmath.vector3(action.x, action.y, 0)
+		local click = data.window2world(action.screen_x, action.screen_y)
+
+		pprint(data.mouse, data.vp)
+		
+		local pos = vmath.vector3(click.x, click.y, 0)
 		go.set_position(pos)
 		msg.post("#co", "enable")
 		timer.delay(1/30, false, function() msg.post("#co", "disable") end)

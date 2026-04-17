@@ -31,6 +31,7 @@ M.diff = 0
 M.gate = {}
 M.bin = {}
 M.vp = vmath.vector4()
+M.mouse = vmath.vector3()
 
 M.save = {
 	sfx = 1,
@@ -68,6 +69,10 @@ end
 
 function M.tile2world(p)
 	return vmath.vector3((p.x * M.TILE) - (M.TILE / 2), (p.y * M.TILE) - (M.TILE / 2), p.z)
+end
+
+function M.window2world(x, y)
+	return vmath.vector3(x / M.mouse.x - M.vp.x, y / M.mouse.y - M.vp.y, 0) / 4
 end
 
 function M.hex2rgba(hex)

@@ -27,6 +27,8 @@ function update(self)
 	end
 
 	data.vp = vmath.vector4(sx,sy,w,h)
+	data.mouse.x = w / render.get_window_width()
+	data.mouse.y = h / render.get_window_height()
 
 	render.set_depth_mask(true)
 	render.clear({[render.BUFFER_COLOR_BIT] = self.clear_color, [render.BUFFER_DEPTH_BIT] = 1, [render.BUFFER_STENCIL_BIT] = 0})
