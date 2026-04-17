@@ -71,10 +71,6 @@ function M.tile2world(p)
 	return vmath.vector3((p.x * M.TILE) - (M.TILE / 2), (p.y * M.TILE) - (M.TILE / 2), p.z)
 end
 
-function M.window2world(x, y)
-	return vmath.vector3(x / M.mouse.x - M.vp.x, y / M.mouse.y - M.vp.y, 0) / 4
-end
-
 function M.hex2rgba(hex)
 	hex = hex:gsub("#","")
 	local rgba = vmath.vector4(tonumber("0x"..hex:sub(1,2))/255, tonumber("0x"..hex:sub(3,4))/255, tonumber("0x"..hex:sub(5,6))/255, 1)
