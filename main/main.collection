@@ -62,6 +62,13 @@ embedded_instances {
   "  data: \"sound: \\\"/assets/ogg/click.ogg\\\"\\n"
   "\"\n"
   "}\n"
+  "embedded_components {\n"
+  "  id: \"music\"\n"
+  "  type: \"sound\"\n"
+  "  data: \"sound: \\\"/assets/ogg/music.ogg\\\"\\n"
+  "looping: 1\\n"
+  "\"\n"
+  "}\n"
   ""
 }
 embedded_instances {

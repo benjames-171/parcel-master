@@ -4,7 +4,7 @@ local WIDTH = 20
 local HEIGHT = 11
 
 local function tilecopy(x, y, layer)
-	local tile = tilemap.get_tile("#levels", layer, x, y + ((data.level - 1) * (HEIGHT + 4)))
+	local tile = tilemap.get_tile("#levels", layer, x + ((data.diff - 1) * (WIDTH + 4)), y + ((data.level - 1) * (HEIGHT + 4)))
 	local info = tilemap.get_tile_info("#levels", layer, x, y)
 	local transform = 0
 

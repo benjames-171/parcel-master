@@ -6,6 +6,7 @@ function init(self)
 end
 
 local function close(self)
+	data.savegamefile()
 	gui.set_enabled(self.node, false)
 	data.state = data.STATE_PLAYING
 	msg.post("main:/handler", "set_time_step", {factor = 1, mode = 0})
@@ -28,6 +29,7 @@ local function input(self, action_id, action)
 		elseif gui.pick_node(gui.get_node("music"), action.x, action.y) then
 			data.save.music = 1 - data.save.music
 			display(self)
+			data.setmusicvol(data.save.music)
 			data.sound("menu-select")
 		elseif gui.pick_node(gui.get_node("quit"), action.x, action.y) then
 			msg.post("main:/handler", "set_time_step", {factor = 1, mode = 0})

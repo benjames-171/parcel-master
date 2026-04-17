@@ -103,7 +103,7 @@ nodes {
   }
   type: TYPE_TEXT
   text: "BEN JAMES\n"
-  "COMPOSER\n"
+  "STEVE OXEN\n"
   "FONTENDDEV\n"
   "DEFOLD"
   font: "main"

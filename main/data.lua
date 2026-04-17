@@ -30,7 +30,6 @@ M.stars = 0
 M.diff = 0
 M.gate = {}
 M.bin = {}
-M.currentsong = nil
 M.vp = vmath.vector4()
 
 M.save = {
@@ -128,7 +127,7 @@ function M.sound(id, gate, vol, speed)
 end
 
 function M.playmusic(id)
-	if id ~= nil and id ~= M.currentsong then
+	if id ~= nil then
 		msg.post("main:/sound", "music", {id = id})
 	end
 end
@@ -142,7 +141,7 @@ function M.stopmusic()
 end
 
 function M.setmusicvol(vol)
-	msg.post("main:/sound", "setmusicvol")
+	msg.post("main:/sound", "setmusicvol", {gain = vol})
 end
 
 function M.fullscreen()

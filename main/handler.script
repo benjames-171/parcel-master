@@ -15,6 +15,7 @@ function init(self)
 	defos.set_view_size(nil, nil, data.SCR_W * data.PIXEL, data.SCR_H * data.PIXEL)
 	defos.set_fullscreen(data.save.fullscreen)
 	defos.set_cursor_visible(not data.save.fullscreen)
+	data.playmusic("music")
 end
 
 function on_message(self, message_id, message, sender)

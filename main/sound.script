@@ -1,23 +1,31 @@
 local data = require "main.data"
 
+function init(self)
+	self.song = nil
+end
+
 function on_message(self, message_id, message, sender)
 	if message_id == hash("play") then
 		sound.play("#"..message.id, {gain = message.vol * data.save.sfx, speed = message.speed})
 	elseif message_id == hash("music") then
-		if data.currentsong ~= message.id then
-			if data.currentsong ~= nil then
-				sound.stop("#"..data.currentsong)
+		if self.song ~= message.id then
+			if self.song ~= nil then
+				sound.stop("#"..self.song)
 			end
 			sound.play("#"..message.id, {gain = data.save.music})
-			data.currentsong = message.id
+			self.song = message.id
 		end
 	elseif message_id == hash("pause") then
-		if data.currentsong ~= nil then
-			sound.pause("#"..data.currentsong, message.pause)
+		if self.song ~= nil then
+			sound.pause("#"..self.song, message.pause)
+		end
+	elseif message_id == hash("setmusicvol") then
+		if self.song ~= nil then
+			go.set("#"..self.song, "gain", message.gain)
 		end
 	elseif message_id == hash("stopmusic") then
-		if data.currentsong ~= nil then
-			sound.stop("#"..data.currentsong)
+		if self.song ~= nil then
+			sound.stop("#"..self.song)
 		end
 	end
 end

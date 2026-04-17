@@ -19,7 +19,7 @@ local function input(self, action_id, action)
 			if data.level <= data.NUM_LEVELS then
 				nextlevel(self)
 			else
-				msg.post("main:/handler", "show_game")
+				msg.post("main:/handler", "show_menu")
 			end
 			data.sound("menu-select")
 		end
@@ -34,10 +34,10 @@ local function show(self)
 		gui.set_enabled(node, false)
 		if n <= data.stars then
 			gui.set(node, "scale", vmath.vector3(2))
-			timer.delay(n/2, false, function()
+			timer.delay(n/3, false, function()
 				gui.set_enabled(gui.get_node("star"..n), true)
 				gui.animate(gui.get_node("star"..n), "scale", 1, gui.EASING_LINEAR, 0.2)
-				data.sound("star", nil, nil, 1 + (n*(1/6)))
+				data.sound("star")
 			end)
 		end
 		data.progress()
