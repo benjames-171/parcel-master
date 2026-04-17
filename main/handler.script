@@ -12,6 +12,7 @@ function init(self)
 	end
 	self.restart = nil
 	data.loadgamefile()
+	data.validate()
 	data.playmusic("music")
 	if not html5 then
 		defos.set_view_size(nil, nil, data.SCR_W * data.PIXEL, data.SCR_H * data.PIXEL)

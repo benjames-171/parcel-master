@@ -36,7 +36,6 @@ M.mouse = vmath.vector3()
 M.save = {
 	sfx = 1,
 	music = 1,
-	progress = {{}, {}, {}},
 	fullscreen = false,
 }
 
@@ -49,16 +48,25 @@ function M.loadgamefile()
 	return false
 end
 
+function M.validate()
+	if not M.save.progress then
+		M.save.progress = {{},{},{}}
+		for n = 1, M.NUM_LEVELS do
+			M.save.progress[1][n] = 0
+			M.save.progress[2][n] = 0
+			M.save.progress[3][n] = 0
+		end
+	end
+end
+
 function M.savegamefile()
 	sys.save(sys.get_save_file(M.APP_NAME, M.FILE_NAME), M.save)
 end
 
 function M.progress()
 	local n = M.stars
-	if M.save.progress[M.diff][M.level] then
-		if M.save.progress[M.diff][M.level] > n then
-			n = M.save.progress[M.diff][M.level]
-		end
+	if M.save.progress[M.diff][M.level] > n then
+		n = M.save.progress[M.diff][M.level]
 	end
 	M.save.progress[M.diff][M.level] = n
 end

@@ -3,10 +3,25 @@ local ui = require "main.ui"
 
 local MENU_LEN = 9
 
+local function isgreyed(n)
+	local grey = true
+	if n == 1 then
+		grey = false
+	elseif data.save.progress[data.diff][n] > 0 then
+		grey = false
+	elseif data.save.progress[data.diff][n-1] > 0 then
+		grey = false
+	end
+	
+	return grey
+end
+
 function init(self)
 	self.node = gui.get_node("container")
 	ui.init(self.node)
 	self.button = {}
+	self.grey = {}
+	pprint(data.save.progress)
 	for n = 1, MENU_LEN do
 		self.button[n] = gui.get_node(tostring(n))
 	end
@@ -41,6 +56,12 @@ local function show(self)
 		if stars then
 			gui.play_flipbook(gui.get_node("stars"..n), "star-"..stars)
 		end
+		self.grey[n] = isgreyed(n)
+		local a = 1
+		if self.grey[n] then
+			a = 0.3
+		end
+		gui.set_alpha(self.button[n], a)
 	end
 end
 
