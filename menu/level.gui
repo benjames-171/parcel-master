@@ -109,7 +109,7 @@ nodes {
     y: -12.0
   }
   type: TYPE_BOX
-  texture: "game/star0"
+  texture: "game/star-0"
   id: "stars1"
   parent: "1"
   inherit_alpha: true
@@ -171,7 +171,7 @@ nodes {
     y: -12.0
   }
   type: TYPE_BOX
-  texture: "game/star0"
+  texture: "game/star-0"
   id: "stars2"
   parent: "2"
   inherit_alpha: true
@@ -234,7 +234,7 @@ nodes {
     y: -12.0
   }
   type: TYPE_BOX
-  texture: "game/star0"
+  texture: "game/star-0"
   id: "stars3"
   parent: "3"
   inherit_alpha: true
@@ -297,7 +297,7 @@ nodes {
     y: -12.0
   }
   type: TYPE_BOX
-  texture: "game/star0"
+  texture: "game/star-0"
   id: "stars4"
   parent: "4"
   inherit_alpha: true
@@ -359,7 +359,7 @@ nodes {
     y: -12.0
   }
   type: TYPE_BOX
-  texture: "game/star0"
+  texture: "game/star-0"
   id: "stars5"
   parent: "5"
   inherit_alpha: true
@@ -422,7 +422,7 @@ nodes {
     y: -12.0
   }
   type: TYPE_BOX
-  texture: "game/star0"
+  texture: "game/star-0"
   id: "stars6"
   parent: "6"
   inherit_alpha: true
@@ -485,7 +485,7 @@ nodes {
     y: -12.0
   }
   type: TYPE_BOX
-  texture: "game/star0"
+  texture: "game/star-0"
   id: "stars7"
   parent: "7"
   inherit_alpha: true
@@ -547,7 +547,7 @@ nodes {
     y: -12.0
   }
   type: TYPE_BOX
-  texture: "game/star0"
+  texture: "game/star-0"
   id: "stars8"
   parent: "8"
   inherit_alpha: true
@@ -610,7 +610,7 @@ nodes {
     y: -12.0
   }
   type: TYPE_BOX
-  texture: "game/star0"
+  texture: "game/star-0"
   id: "stars9"
   parent: "9"
   inherit_alpha: true

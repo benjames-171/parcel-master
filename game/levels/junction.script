@@ -26,6 +26,7 @@ function init(self)
 	tilemap.set_tile("level#screen", "main", self.pos.x, self.pos.y, self.valid[self.mask][self.dir])
 	local t = self.valid[self.mask][self.dir]
 	sprite.play_flipbook("#sprite", self.arrow[t])
+	go.animate("#outline", "tint.w", go.PLAYBACK_LOOP_BACKWARD, 2, go.EASING_LINEAR, 1)
 end
 
 local function switch(self)

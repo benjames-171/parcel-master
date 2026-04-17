@@ -29,19 +29,19 @@ M.home = 0
 M.stars = 0
 M.diff = 0
 M.gate = {}
+M.bin = {}
 M.currentsong = nil
 M.vp = vmath.vector4()
 
 M.save = {
 	sfx = 1,
 	music = 1,
-	progress = {},
+	progress = {{}, {}, {}},
 	fullscreen = false,
 }
 
 function M.loadgamefile()
 	local file = sys.load(sys.get_save_file(M.APP_NAME, M.FILE_NAME))
-
 	if next(file) ~= nil then
 		M.save = file
 		return true
@@ -51,6 +51,16 @@ end
 
 function M.savegamefile()
 	sys.save(sys.get_save_file(M.APP_NAME, M.FILE_NAME), M.save)
+end
+
+function M.progress()
+	local n = M.stars
+	if M.save.progress[M.diff][M.level] then
+		if M.save.progress[M.diff][M.level] > n then
+			n = M.save.progress[M.diff][M.level]
+		end
+	end
+	M.save.progress[M.diff][M.level] = n
 end
 
 function M.world2tile(p)

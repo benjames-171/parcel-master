@@ -34,6 +34,8 @@ local function show(self)
 				data.sound("star", nil, nil, 1 + (n*(1/6)))
 			end)
 		end
+		data.progress()
+		data.savegamefile()
 	end
 end
 

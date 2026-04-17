@@ -32,6 +32,7 @@ local function setuplevel(self)
 		end
 	end
 	self.obj = {}
+	data.bin = {}
 end
 
 local function parse(self)
@@ -39,13 +40,29 @@ local function parse(self)
 		for x = -1, WIDTH + 2 do
 			tilecopy(x, y, "main")
 			local obj = nil
+			local t = tilecopy(x, y, "main")
 			local c = tilecopy(x, y, "control")
 			local pos = data.tile2world(vmath.vector3(x, y, 0))
+
 			if c >= 6 and c <= 9 then
 				obj = factory.create("#spawn-fac", pos, nil, {move = self.move[c]})
 			elseif c >= 99 and c <= 108 then
 				obj = factory.create("#junc-fac", pos, nil, {mask = c - 98})
+			elseif t == 30 then
+				obj = factory.create("#anim-fac", pos)
+			elseif t == 43 then
+				obj = factory.create("#anim-fac", pos)
+				go.set(obj, "euler.z", 90)
+			elseif t == 35 then
+				obj = factory.create("#anim-fac", pos)
+				go.set(obj, "euler.z", 270)
+			elseif t == 58 then
+				obj = factory.create("#anim-fac", pos)
+				go.set(obj, "euler.z", 180)
+			elseif t >= 71 and t <= 74 then
+				data.bin[t-70] = true
 			end
+			
 			if obj then
 				table.insert(self.obj, obj)
 			end

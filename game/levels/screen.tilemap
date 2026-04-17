@@ -815,7 +815,7 @@ layers {
 }
 layers {
   id: "main"
-  z: 0.0
+  z: -0.4
   cell {
     x: -2
     y: -2
