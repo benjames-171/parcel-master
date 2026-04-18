@@ -1,5 +1,13 @@
 script: "/main/shutter.gui_script"
+textures {
+  name: "game"
+  texture: "/game/core/game.tilesource"
+}
 nodes {
+  position {
+    x: 160.0
+    y: 90.0
+  }
   type: TYPE_BOX
   id: "container"
   inherit_alpha: true
@@ -7,19 +15,38 @@ nodes {
 nodes {
   size {
     x: 320.0
-    y: 180.0
-  }
-  color {
-    x: 0.03137255
-    y: 0.019607844
-    z: 0.05490196
+    y: 92.0
   }
   type: TYPE_BOX
-  id: "shutter"
-  pivot: PIVOT_SW
+  texture: "game/shutter"
+  id: "up"
+  pivot: PIVOT_S
   parent: "container"
   inherit_alpha: true
-  enabled: false
+  slice9 {
+    x: 4.0
+    y: 4.0
+    z: 4.0
+    w: 4.0
+  }
+}
+nodes {
+  size {
+    x: 320.0
+    y: 92.0
+  }
+  type: TYPE_BOX
+  texture: "game/shutter"
+  id: "down"
+  pivot: PIVOT_N
+  parent: "container"
+  inherit_alpha: true
+  slice9 {
+    x: 4.0
+    y: 4.0
+    z: 4.0
+    w: 4.0
+  }
 }
 material: "/builtins/materials/gui.material"
 adjust_reference: ADJUST_REFERENCE_PARENT

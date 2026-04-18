@@ -11,6 +11,7 @@ function init(self)
 	for n = 1, MENU_LEN do
 		self.button[n] = gui.get_node(tostring(n))
 	end
+	msg.post("main:/gui", "fadein")
 	data.state = data.STATE_MENU
 end
 

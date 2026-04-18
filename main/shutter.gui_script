@@ -1,8 +1,10 @@
+local data = require "main.data"
+
 local DELAY = 0.1
 local TIME = 0.3
 
-local function disablenode (self, node)
-	gui.set_enabled(node, false)
+local function complete(self)
+	gui.set_enabled(self.node, false)
 end
 
 function init(self)
@@ -12,14 +14,16 @@ end
 
 local function fadein(self)
 	gui.set_enabled(self.node, true)
-	gui.set_alpha(self.node, 1)
-	gui.animate(self.node, "color.w", 0, gui.EASING_LINEAR, TIME, DELAY, disablenode)
+	gui.animate(gui.get_node("up"), "position.y", 100, gui.EASING_LINEAR, TIME, DELAY, complete)
+	gui.animate(gui.get_node("down"), "position.y", -100, gui.EASING_LINEAR, TIME, DELAY)
+	data.sound("hiss2")
 end
 
 local function fadeout(self)
 	gui.set_enabled(self.node, true)
-	gui.set_alpha(self.node, 0)
-	gui.animate(self.node, "color.w", 1, gui.EASING_LINEAR, TIME, DELAY)
+	gui.animate(gui.get_node("up"), "position.y", 0, gui.EASING_LINEAR, TIME, DELAY)
+	gui.animate(gui.get_node("down"), "position.y", 0, gui.EASING_LINEAR, TIME, DELAY)
+	data.sound("hiss1")
 end
 
 function on_message(self, message_id, message, sender)

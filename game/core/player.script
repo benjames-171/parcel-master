@@ -3,6 +3,7 @@ local data = require "main.data"
 function init(self)
 	msg.post(".", "acquire_input_focus")
 	msg.post("#co", "disable")
+	msg.post("main:/gui", "fadein")
 end
 
 local function input_playing(self, action_id, action)
@@ -38,6 +39,11 @@ end
 
 function on_message(self, message_id, message, sender)
 	if message_id == hash("quit") then
-		msg.post("main:/handler", "show_menu")
+		msg.post("main:/gui", "fadeout")
+		msg.post("level", "stopmove")
+		data.state = data.STATE_NULL
+		timer.delay(0.5, false, function()
+			msg.post("main:/handler", "show_menu")
+		end)
 	end
 end

@@ -69,6 +69,18 @@ embedded_instances {
   "looping: 1\\n"
   "\"\n"
   "}\n"
+  "embedded_components {\n"
+  "  id: \"hiss1\"\n"
+  "  type: \"sound\"\n"
+  "  data: \"sound: \\\"/assets/ogg/hiss1.ogg\\\"\\n"
+  "\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"hiss2\"\n"
+  "  type: \"sound\"\n"
+  "  data: \"sound: \\\"/assets/ogg/hiss2.ogg\\\"\\n"
+  "\"\n"
+  "}\n"
   ""
 }
 embedded_instances {

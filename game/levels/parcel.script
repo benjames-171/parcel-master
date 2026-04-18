@@ -68,9 +68,8 @@ function init(self)
 
 	self.last = vmath.vector3()
 	
-	repeat
-		self.type = math.random(1, 4)
-	until data.bin[self.type]
+	self.type = data.shuffle[data.shuffpos]
+	data.shuffpos = data.shuffpos + 1
 	
 	sprite.play_flipbook("#sprite", "parcel-"..self.type)
 end

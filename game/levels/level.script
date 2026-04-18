@@ -106,6 +106,25 @@ local function parse(self)
 	end
 end
 
+local function shuffle(self)
+	data.shuffle = {}
+	data.shuffpos = 1
+	local r = 0
+	for n = 1, data.parcels do
+		repeat
+			r = data.wrap(r + 1, 1, 4)
+		until(data.bin[r])
+		data.shuffle[n] = r
+	end
+
+	for n = 1, data.parcels do
+		r = math.random(1, data.parcels)
+		local temp = data.shuffle[r]
+		data.shuffle[r] = data.shuffle[n]
+		data.shuffle[n] = temp
+	end
+end
+
 function init(self)
 	msg.post("#levels", "disable")
 	self.move = {
@@ -116,6 +135,7 @@ function init(self)
 	}
 	setuplevel(self)
 	parse(self)
+	shuffle(self)
 end
 
 function on_message(self, message_id, message, sender)
