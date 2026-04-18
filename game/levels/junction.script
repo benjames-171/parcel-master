@@ -27,6 +27,7 @@ function init(self)
 	local t = self.valid[self.mask][self.dir]
 	sprite.play_flipbook("#sprite", self.arrow[t])
 	go.animate("#outline", "tint.w", go.PLAYBACK_LOOP_FORWARD, 0.5, go.EASING_LINEAR, 1)
+	go.animate("#outline", "scale", go.PLAYBACK_LOOP_PINGPONG, 1.1, go.EASING_LINEAR, 2)
 end
 
 local function switch(self)

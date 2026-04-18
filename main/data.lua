@@ -20,7 +20,7 @@ M.NUM_LEVELS = 9
 M.GATE = 1/25
 
 M.APP_NAME = "parcel-master"
-M.FILE_NAME = "game.sav"
+M.FILE_NAME = "parcel-master-save.dat"
 
 M.level = 1
 M.time = 0
@@ -36,8 +36,7 @@ M.mouse = vmath.vector3()
 
 M.save = {
 	sfx = 1,
-	music = 1,
-	fullscreen = false,
+	music = 1
 }
 
 function M.loadgamefile()
@@ -107,27 +106,6 @@ function M.wrap(v, min, max)
 	return v
 end
 
-function M.diff(a, b)
-	return math.abs(a - b)
-end
-
-function M.ms2str(time)
-	local day = math.floor(time / 86400)
-	local rem = time % 86400
-	local hr = math.floor(rem / 3600)
-	rem = rem % 3600
-	local min = math.floor(rem / 60)
-	rem = rem % 60
-	local sec = rem
-
-	local str = ""
-	if day > 0 then str = tostring(day) .. "d " end
-	if hr > 0 or day > 0 then str = str .. tostring(hr) .. ":" end
-
-	str = string.format("%s%02d:%02d", str, min, math.floor(sec))
-	return str
-end
-
 function M.sound(id, gate, vol, speed)
 	vol = vol or 1
 	speed = speed or 1
@@ -157,12 +135,6 @@ end
 
 function M.setmusicvol(vol)
 	msg.post("main:/sound", "setmusicvol", {gain = vol})
-end
-
-function M.fullscreen()
-	M.save.fullscreen = not defos.is_fullscreen()
-	defos.set_fullscreen(M.save.fullscreen)
-	defos.set_cursor_visible(not defos.is_fullscreen())
 end
 
 return M

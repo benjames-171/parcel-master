@@ -21,20 +21,6 @@ local function tilecopy(x, y, layer)
 	return tile
 end
 
-local function setuplevel(self)
-	data.stars = 3
-	data.state = data.STATE_PLAYING
-	if self.obj then
-		for _,v in pairs(self.obj) do
-			if go.exists(v) then
-				go.delete(v)
-			end
-		end
-	end
-	self.obj = {}
-	data.bin = {}
-end
-
 local function parse(self)
 	local id = 0
 	for y = -1, HEIGHT + 2 do
@@ -129,6 +115,26 @@ local function shuffle(self)
 	end
 end
 
+local function setuplevel(self)
+	if self.obj then
+		for _,v in pairs(self.obj) do
+			if go.exists(v) then
+				go.delete(v)
+			end
+		end
+	end
+	
+	self.obj = {}
+	data.bin = {}
+	data.stars = 3
+	data.state = data.STATE_PLAYING
+	
+	parse(self)
+	if next(data.bin) ~= nil then
+		shuffle(self)
+	end
+end
+
 function init(self)
 	msg.post("#levels", "disable")
 	self.move = {
@@ -138,16 +144,11 @@ function init(self)
 		[9] = vmath.vector3(-1, 0, 0)
 	}
 	setuplevel(self)
-	parse(self)
-	if next(data.bin) ~= nil then
-		shuffle(self)
-	end
 end
 
 function on_message(self, message_id, message, sender)
 	if message_id == hash("newlevel") then
 		setuplevel(self)
-		parse(self)
 	elseif message_id == hash("addobj") then
 		table.insert(self.obj, message.url)
 	elseif message_id == hash("removeobj") then
