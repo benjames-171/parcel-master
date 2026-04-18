@@ -71,6 +71,11 @@ function M.progress()
 	M.save.progress[M.diff][M.level] = n
 end
 
+function M.speed()
+	local f = {0.9, 1, 1.1}
+	return f[M.diff] or 1
+end
+
 function M.world2tile(p)
 	return vmath.vector3(math.floor((p.x + M.TILE) / M.TILE), math.floor((p.y + M.TILE) / M.TILE), p.z)
 end

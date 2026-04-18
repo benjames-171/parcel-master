@@ -135,7 +135,9 @@ function init(self)
 	}
 	setuplevel(self)
 	parse(self)
-	shuffle(self)
+	if next(data.bin) ~= nil then
+		shuffle(self)
+	end
 end
 
 function on_message(self, message_id, message, sender)

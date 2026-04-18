@@ -9,7 +9,12 @@ end
 local function nextlevel(self)
 	ui.hide(self.node)
 	data.state = data.STATE_PLAYING
-	msg.post("level", "newlevel")
+	
+	msg.post("main:/gui", "fadeout")
+	timer.delay(0.5, false, function()
+		msg.post("level", "newlevel")
+		msg.post("main:/gui", "fadein")
+	end)
 end
 
 local function input(self, action_id, action)

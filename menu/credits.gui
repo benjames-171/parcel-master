@@ -68,7 +68,7 @@ nodes {
   type: TYPE_TEXT
   text: "developed by\n"
   "music by\n"
-  "graphic assets\n"
+  "\'larceny\' font by\n"
   "game engine"
   font: "main"
   id: "left"
