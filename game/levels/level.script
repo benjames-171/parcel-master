@@ -22,8 +22,6 @@ local function tilecopy(x, y, layer)
 end
 
 local function setuplevel(self)
-	data.parcels = 10 + (data.level * 2) 
-	data.home = data.parcels
 	data.stars = 3
 	data.state = data.STATE_PLAYING
 	if self.obj then
@@ -38,6 +36,7 @@ local function setuplevel(self)
 end
 
 local function parse(self)
+	local id = 0
 	for y = -1, HEIGHT + 2 do
 		for x = -1, WIDTH + 2 do
 			tilecopy(x, y, "main")
@@ -48,7 +47,8 @@ local function parse(self)
 			tilecopy(x, y, "top")
 
 			if c >= 6 and c <= 9 then
-				obj = factory.create("#spawn-fac", pos, nil, {move = self.move[c]})
+				obj = factory.create("#spawn-fac", pos, nil, {move = self.move[c], id = id})
+				id = id + 1
 			elseif c >= 99 and c <= 108 then
 				obj = factory.create("#junc-fac", pos, nil, {mask = c - 98})
 			elseif m == 29 then
@@ -104,6 +104,10 @@ local function parse(self)
 			end
 		end
 	end
+
+	data.parcels = (10 + (data.level * 2)) * id
+	data.home = data.parcels
+	data.mult = 0.75 + (id * 0.25)
 end
 
 local function shuffle(self)

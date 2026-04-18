@@ -28,6 +28,7 @@ M.parcels = 0
 M.home = 0
 M.stars = 0
 M.diff = 0
+M.mult = 1
 M.gate = {}
 M.bin = {}
 M.vp = vmath.vector4()

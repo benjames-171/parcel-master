@@ -1,6 +1,7 @@
 local data = require "main.data"
 
 go.property("move", vmath.vector3())
+go.property("id", 0)
 
 local function spawn(self)
 	if data.state == data.STATE_PLAYING then
@@ -18,6 +19,8 @@ local function spawn(self)
 end
 
 function init(self)
-	self.handle = timer.delay(3 - (data.level / 5), true, spawn)
+	timer.delay(self.id, false, function()
+		self.handle = timer.delay((3 - (data.level / 5)) * data.mult, true, spawn)
+	end)
 end
 

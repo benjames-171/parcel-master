@@ -154,7 +154,7 @@ nodes {
   adjust_mode: ADJUST_MODE_STRETCH
   parent: "container"
   inherit_alpha: true
-  alpha: 0.2
+  alpha: 0.3
   outline_alpha: 0.0
   shadow_alpha: 0.0
 }
