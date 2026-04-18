@@ -20,7 +20,7 @@ M.NUM_LEVELS = 9
 M.GATE = 1/25
 
 M.APP_NAME = "parcel-master"
-M.FILE_NAME = "parcel-master-save.dat"
+M.FILE_NAME = "save.dat"
 
 M.level = 1
 M.time = 0

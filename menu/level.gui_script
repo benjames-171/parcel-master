@@ -37,12 +37,14 @@ local function input(self, action_id, action)
 
 		for n = 1, MENU_LEN do
 			if gui.pick_node(self.button[n], action.x, action.y) then
-				data.level = n
-				msg.post("main:/gui", "fadeout")
-				data.sound("menu-select")
-				timer.delay(0.5, false, function()
-					msg.post("main:/handler", "show_game")
-				end)
+				if sys.get_engine_info().is_debug or not self.grey[n] then
+					data.level = n
+					msg.post("main:/gui", "fadeout")
+					data.sound("menu-select")
+					timer.delay(0.5, false, function()
+						msg.post("main:/handler", "show_game")
+					end)
+				end
 			end
 		end
 	end
