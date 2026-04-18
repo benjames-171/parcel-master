@@ -5,11 +5,11 @@ components {
 embedded_components {
   id: "sprite"
   type: "sprite"
-  data: "default_animation: \"thumb-up\"\n"
+  data: "default_animation: \"up\"\n"
   "material: \"/builtins/materials/sprite.material\"\n"
   "textures {\n"
   "  sampler: \"texture_sampler\"\n"
-  "  texture: \"/game/core/game.tilesource\"\n"
+  "  texture: \"/game/core/game24.tilesource\"\n"
   "}\n"
   ""
   position {

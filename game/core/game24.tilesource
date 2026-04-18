@@ -1,0 +1,28 @@
+image: "/assets/png/tiles24.png"
+tile_width: 24
+tile_height: 24
+animations {
+  id: "down"
+  start_tile: 2
+  end_tile: 2
+  playback: PLAYBACK_NONE
+}
+animations {
+  id: "star"
+  start_tile: 3
+  end_tile: 3
+  playback: PLAYBACK_NONE
+}
+animations {
+  id: "star-slot"
+  start_tile: 4
+  end_tile: 4
+  playback: PLAYBACK_NONE
+}
+animations {
+  id: "up"
+  start_tile: 1
+  end_tile: 1
+  playback: PLAYBACK_NONE
+}
+extrude_borders: 2

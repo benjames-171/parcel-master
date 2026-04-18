@@ -41,8 +41,8 @@ embedded_components {
   "  w: 6.0\n"
   "}\n"
   "size {\n"
-  "  x: 24.0\n"
-  "  y: 24.0\n"
+  "  x: 26.0\n"
+  "  y: 26.0\n"
   "}\n"
   "size_mode: SIZE_MODE_MANUAL\n"
   "textures {\n"
@@ -65,6 +65,6 @@ embedded_components {
   "}\n"
   ""
   position {
-    z: 0.1
+    z: 0.15
   }
 }

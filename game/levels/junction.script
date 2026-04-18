@@ -26,7 +26,7 @@ function init(self)
 	tilemap.set_tile("level#screen", "main", self.pos.x, self.pos.y, self.valid[self.mask][self.dir])
 	local t = self.valid[self.mask][self.dir]
 	sprite.play_flipbook("#sprite", self.arrow[t])
-	go.animate("#outline", "tint.w", go.PLAYBACK_LOOP_BACKWARD, 2, go.EASING_LINEAR, 1)
+	go.animate("#outline", "tint.w", go.PLAYBACK_LOOP_FORWARD, 0.5, go.EASING_LINEAR, 1)
 end
 
 local function switch(self)
@@ -39,6 +39,9 @@ local function switch(self)
 	tilemap.set_tile("level#screen", "main", self.pos.x, self.pos.y, t)
 	sprite.play_flipbook("#sprite", self.arrow[t])
 	data.sound("click")
+
+	go.set("#sprite", "scale", vmath.vector3(1))
+	go.animate("#sprite", "scale", go.PLAYBACK_ONCE_PINGPONG, 1.3, go.EASING_INOUTCIRC, 0.2)
 end
 
 function on_message(self, message_id, message, sender)

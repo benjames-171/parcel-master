@@ -2,7 +2,7 @@ go.property("correct", false)
 
 function init(self)
 	if not self.correct then
-		sprite.play_flipbook("#sprite", "thumb-down")
+		sprite.play_flipbook("#sprite", "down")
 	end
 	go.animate(".", "scale", go.PLAYBACK_LOOP_FORWARD, 1.5, go.EASING_INOUTSINE, 0.25)
 	timer.delay(1, false, function() go.delete() end)

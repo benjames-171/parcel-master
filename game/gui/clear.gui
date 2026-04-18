@@ -12,8 +12,8 @@ textures {
   texture: "/game/core/game.tilesource"
 }
 textures {
-  name: "main"
-  texture: "/main/main.atlas"
+  name: "game24"
+  texture: "/game/core/game24.tilesource"
 }
 nodes {
   position {
@@ -77,7 +77,7 @@ nodes {
     y: 3.0
   }
   type: TYPE_BOX
-  texture: "main/star-slot"
+  texture: "game24/star-slot"
   id: "star-slot1"
   parent: "container"
   inherit_alpha: true
@@ -85,7 +85,7 @@ nodes {
 }
 nodes {
   type: TYPE_BOX
-  texture: "main/star"
+  texture: "game24/star"
   id: "star1"
   parent: "star-slot1"
   inherit_alpha: true
@@ -96,7 +96,7 @@ nodes {
     y: 3.0
   }
   type: TYPE_BOX
-  texture: "main/star-slot"
+  texture: "game24/star-slot"
   id: "star-slot2"
   parent: "container"
   inherit_alpha: true
@@ -104,7 +104,7 @@ nodes {
 }
 nodes {
   type: TYPE_BOX
-  texture: "main/star"
+  texture: "game24/star"
   id: "star2"
   parent: "star-slot2"
   inherit_alpha: true
@@ -116,7 +116,7 @@ nodes {
     y: 3.0
   }
   type: TYPE_BOX
-  texture: "main/star-slot"
+  texture: "game24/star-slot"
   id: "star-slot3"
   parent: "container"
   inherit_alpha: true
@@ -124,7 +124,7 @@ nodes {
 }
 nodes {
   type: TYPE_BOX
-  texture: "main/star"
+  texture: "game24/star"
   id: "star3"
   parent: "star-slot3"
   inherit_alpha: true
