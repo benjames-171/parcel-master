@@ -8,8 +8,7 @@ end
 
 local function nextlevel(self)
 	ui.hide(self.node)
-	data.state = data.STATE_PLAYING
-	
+	data.state = data.STATE_NULL
 	msg.post("main:/gui", "fadeout")
 	timer.delay(0.5, false, function()
 		msg.post("level", "newlevel")
@@ -27,6 +26,8 @@ local function input(self, action_id, action)
 				msg.post("main:/handler", "show_menu")
 			end
 			data.sound("menu-select")
+		elseif gui.pick_node(gui.get_node("replay"), action.x, action.y) then
+			nextlevel(self)
 		end
 	end
 end

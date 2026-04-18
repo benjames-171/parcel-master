@@ -70,6 +70,9 @@ function init(self)
 	
 	self.type = data.shuffle[data.shuffpos]
 	data.shuffpos = data.shuffpos + 1
-	
+	if not data.shuffle[data.shuffpos] then
+		data.shuffpos = 1
+	end
+
 	sprite.play_flipbook("#sprite", "parcel-"..self.type)
 end

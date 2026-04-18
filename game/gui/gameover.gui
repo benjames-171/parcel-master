@@ -22,7 +22,7 @@ nodes {
 }
 nodes {
   size {
-    x: 110.0
+    x: 80.0
     y: 80.0
   }
   type: TYPE_BOX
@@ -72,7 +72,7 @@ nodes {
     y: 13.0
   }
   size {
-    x: 100.0
+    x: 70.0
     y: 8.0
   }
   color {
@@ -81,9 +81,10 @@ nodes {
     z: 0.7411765
   }
   type: TYPE_TEXT
-  text: "TOO MANY BAD DROPS!"
+  text: "3 BAD DROPS!"
   font: "small"
   id: "subline"
+  line_break: true
   parent: "container"
   inherit_alpha: true
   outline_alpha: 0.0

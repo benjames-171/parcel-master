@@ -8,7 +8,6 @@ end
 local function close(self)
 	data.savegamefile()
 	gui.set_enabled(self.node, false)
-	data.state = data.STATE_PLAYING
 	msg.post("main:/handler", "set_time_step", {factor = data.speed(), mode = 0})
 end
 
@@ -17,10 +16,23 @@ local function display(self)
 	gui.set_alpha(gui.get_node("music-icon"), data.save.music + 0.2)
 end
 
+local function restart(self)
+	close(self)
+	msg.post("main:/gui", "fadeout")
+	timer.delay(0.5, false, function()
+		msg.post("level", "newlevel")
+		msg.post("main:/gui", "fadein")
+	end)
+end
+
 local function input(self, action_id, action)
 	if action_id == hash("action") and action.pressed then
 		if gui.pick_node(gui.get_node("resume"), action.x, action.y) then
 			close(self)
+			data.state = data.STATE_PLAYING
+			data.sound("menu-select")
+		elseif gui.pick_node(gui.get_node("restart"), action.x, action.y) then
+			restart(self)
 			data.sound("menu-select")
 		elseif gui.pick_node(gui.get_node("sfx"), action.x, action.y) then
 			data.save.sfx = 1 - data.save.sfx
@@ -36,8 +48,6 @@ local function input(self, action_id, action)
 			msg.post("player", "quit")
 			data.sound("menu-select")
 		end
-	elseif action_id == hash("exit") and action.pressed then
-		close(self)
 	end
 end
 	

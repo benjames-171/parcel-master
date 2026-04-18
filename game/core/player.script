@@ -41,7 +41,6 @@ end
 function on_message(self, message_id, message, sender)
 	if message_id == hash("quit") then
 		msg.post("main:/gui", "fadeout")
-		msg.post("level", "stopmove")
 		data.state = data.STATE_NULL
 		timer.delay(0.5, false, function()
 			msg.post("main:/handler", "show_menu")
