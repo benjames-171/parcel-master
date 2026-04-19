@@ -2,8 +2,6 @@ local data = require "main.data"
 
 local TIME = 0.52
 
-go.property("move", vmath.vector3())
-
 local function complete(self, t)
 	go.animate(".", "scale", go.PLAYBACK_ONCE_FORWARD, 0, go.EASING_LINEAR, 0.3)
 	go.animate("#sprite", "tint.w", go.PLAYBACK_ONCE_FORWARD, 0, go.EASING_LINEAR, 0.3)
@@ -48,6 +46,23 @@ local function move(self)
 	end
 end
 
+local function cycle(self)
+	repeat
+		self.cycle = self.cycle + 1
+		if self.cycle > 4 then
+			self.cycle = 1
+		end
+	until data.bin[self.cycle]
+
+	self.type = self.cycle
+	sprite.play_flipbook("#sprite", "parcel-"..self.type)
+	
+	self.cyclecount = self.cyclecount + 1
+	if self.cyclecount > 10 then
+		timer.cancel(self.handle)
+	end
+end
+
 function init(self)
 	self.dir = {
 		[29] = vmath.vector3(1, 0, 0),
@@ -64,10 +79,10 @@ function init(self)
 		[58] = vmath.vector3(-1, 0, 0),
 		[59] = vmath.vector3(-1, 0, 0)
 	}
+
 	move(self)
 
 	self.last = vmath.vector3()
-	
 	self.type = data.shuffle[data.shuffpos]
 	data.shuffpos = data.shuffpos + 1
 	if not data.shuffle[data.shuffpos] then
@@ -75,4 +90,13 @@ function init(self)
 	end
 
 	sprite.play_flipbook("#sprite", "parcel-"..self.type)
+
+	if data.diff > 1 then
+		local freq = 25 * (4 - data.diff)
+		if math.random(1, freq) == 1 then
+			self.cycle = self.type
+			self.cyclecount = 1
+			self.handle = timer.delay(0.15, true, cycle)
+		end
+	end
 end

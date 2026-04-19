@@ -1,6 +1,5 @@
 local data = require "main.data"
 
-go.property("move", vmath.vector3())
 go.property("id", 0)
 
 local function spawn(self)
@@ -11,8 +10,7 @@ local function spawn(self)
 		end
 		if data.parcels >= 0 then
 			local pos = go.get_position()
-			pos = pos + self.move * data.TILE
-			local obj = factory.create("#parcel-fac", pos, nil, {move = self.dir})
+			local obj = factory.create("#parcel-fac", pos)
 			msg.post("level", "addobj", {url = obj})
 		end
 	end

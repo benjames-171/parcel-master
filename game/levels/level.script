@@ -1,11 +1,11 @@
 local data = require "main.data"
 
 local WIDTH = 20
-local HEIGHT = 11
+local HEIGHT = 12
 
 local function tilecopy(x, y, layer)
-	local sx = x + ((data.diff - 1) * (WIDTH + 4))
-	local sy = y + ((data.level - 1) * (HEIGHT + 4))
+	local sx = x + ((data.diff - 1) * (WIDTH + 2))
+	local sy = y + ((data.level - 1) * (HEIGHT + 2))
 	local tile = tilemap.get_tile("#levels", layer, sx, sy)
 	local info = tilemap.get_tile_info("#levels", layer, sx, sy)
 	local transform = 0
@@ -23,8 +23,8 @@ end
 
 local function parse(self)
 	local id = 0
-	for y = -1, HEIGHT + 2 do
-		for x = -1, WIDTH + 2 do
+	for y = 0, HEIGHT + 1 do
+		for x = 0, WIDTH + 1 do
 			tilecopy(x, y, "main")
 			local obj = nil
 			local pos = data.tile2world(vmath.vector3(x, y, 0))
@@ -32,8 +32,8 @@ local function parse(self)
 			local c = tilecopy(x, y, "control")
 			tilecopy(x, y, "top")
 
-			if c >= 6 and c <= 9 then
-				obj = factory.create("#spawn-fac", pos, nil, {move = self.move[c], id = id})
+			if c == 10 then
+				obj = factory.create("#spawn-fac", pos, nil, {id = id})
 				id = id + 1
 			elseif c >= 99 and c <= 108 then
 				obj = factory.create("#junc-fac", pos, nil, {mask = c - 98})
@@ -52,7 +52,6 @@ local function parse(self)
 				obj = factory.create("#anim-fac", pos)
 				sprite.play_flipbook(msg.url(nil, obj, "sprite"), "belt-cc")
 				go.set(obj, "euler.z", 180)
-				
 			elseif m == 32 then
 				obj = factory.create("#anim-fac", pos)
 				sprite.play_flipbook(msg.url(nil, obj, "sprite"), "belt-ca")
@@ -68,8 +67,6 @@ local function parse(self)
 				obj = factory.create("#anim-fac", pos)
 				sprite.play_flipbook(msg.url(nil, obj, "sprite"), "belt-ca")
 				go.set(obj, "euler.z", 270)
-
-				
 			elseif m == 30 then
 				obj = factory.create("#anim-fac", pos)
 			elseif m == 43 then
@@ -84,7 +81,7 @@ local function parse(self)
 			elseif m >= 71 and m <= 74 then
 				data.bin[m - 70] = true
 			end
-			
+
 			if obj then
 				table.insert(self.obj, obj)
 			end
@@ -137,12 +134,6 @@ end
 
 function init(self)
 	msg.post("#levels", "disable")
-	self.move = {
-		[6] = vmath.vector3(0, 1, 0),
-		[7] = vmath.vector3(1, 0, 0),
-		[8] = vmath.vector3(0, -1, 0),
-		[9] = vmath.vector3(-1, 0, 0)
-	}
 	setuplevel(self)
 end
 
