@@ -57,8 +57,8 @@ local function cycle(self)
 	self.type = self.cycle
 	sprite.play_flipbook("#sprite", "parcel-"..self.type)
 	
-	self.cyclecount = self.cyclecount + 1
-	if self.cyclecount > 10 then
+	self.cyclecount = self.cyclecount - 1
+	if self.cyclecount <= 0 then
 		timer.cancel(self.handle)
 	end
 end
@@ -95,7 +95,7 @@ function init(self)
 		local freq = 25 * (4 - data.diff)
 		if math.random(1, freq) == 1 then
 			self.cycle = self.type
-			self.cyclecount = 1
+			self.cyclecount = 6 + (data.diff * 2)
 			self.handle = timer.delay(0.15, true, cycle)
 		end
 	end
