@@ -13,8 +13,9 @@ local function spawn(self)
 			local obj = factory.create("#parcel-fac", pos)
 			msg.post("level", "addobj", {url = obj})
 		end
-		local v = (data.diff / 3) * 100
-		v = math.random(-v, v) / 100
+		local v = 0 --(data.diff / 3) * 100
+		--v = math.random(-v, v) / 100
+		
 		self.handle = timer.delay(((3 - (data.level / 20)) * data.mult) + v, false, spawn)
 	end
 end
