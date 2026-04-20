@@ -1,6 +1,21 @@
 local data = require "main.data"
 
 go.property("id", 0)
+go.property("mask", 0)
+
+local function switch(self)
+	if self.mask ~= 0 then
+		self.dir = self.dir + 1
+		local t = data.valid[self.mask][self.dir]
+		if not t then
+			self.dir = 1
+			t = data.valid[self.mask][self.dir]
+		end
+		tilemap.set_tile("level#screen", "main", self.pos.x, self.pos.y, t)
+		return true
+	end
+	return false
+end
 
 local function spawn(self)
 	if data.state == data.STATE_PLAYING then
@@ -13,14 +28,20 @@ local function spawn(self)
 			local obj = factory.create("#parcel-fac", pos)
 			msg.post("level", "addobj", {url = obj})
 		end
-		local v = 0 --(data.diff / 3) * 100
-		--v = math.random(-v, v) / 100
-		
-		self.handle = timer.delay(((3 - (data.level / 20)) * data.mult) + v, false, spawn)
+		self.handle = timer.delay(self.freq, false, spawn)
+		switch(self)
 	end
 end
 
 function init(self)
-	timer.delay(self.id + 2, false, spawn)
+	self.dir = 1
+	self.pos = data.world2tile(go.get_position())
+	local m = 1
+	if switch(self) then
+		m = 0.75
+	end
+	self.freq = 3 - data.level / 20
+	self.freq = self.freq * data.mult * m
+	timer.delay(2 + self.id * 2, false, spawn)
 end
 

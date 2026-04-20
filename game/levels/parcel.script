@@ -65,6 +65,12 @@ end
 
 function init(self)
 	self.dir = {
+
+		[21] = vmath.vector3(1, 0, 0),
+		[22] = vmath.vector3(0, 1, 0),
+		[23] = vmath.vector3(-1, 0, 0),
+		[24] = vmath.vector3(0, -1, 0),
+		
 		[29] = vmath.vector3(1, 0, 0),
 		[30] = vmath.vector3(1, 0, 0),
 		[31] = vmath.vector3(0, -1, 0),

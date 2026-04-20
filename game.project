@@ -31,3 +31,6 @@ height = 180
 title = Parcel Master
 dependencies#0 = https://github.com/subsoap/defos/archive/refs/tags/v2.8.6.zip
 
+[native_extension]
+app_manifest = /custom.appmanifest
+

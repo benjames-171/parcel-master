@@ -30,13 +30,30 @@ local function parse(self)
 			local pos = data.tile2world(vmath.vector3(x, y, 0))
 			local m = tilecopy(x, y, "main")
 			local c = tilecopy(x, y, "control")
+			local t = tilecopy(x, y, "top")
 			tilecopy(x, y, "top")
 
 			if c == 10 then
-				obj = factory.create("#spawn-fac", pos, nil, {id = id})
+				if t ~= 0 then t = t - 98 end
+				obj = factory.create("#spawn-fac", pos, nil, {id = id, mask = t})
 				id = id + 1
 			elseif c >= 99 and c <= 108 then
 				obj = factory.create("#junc-fac", pos, nil, {mask = c - 98})
+			elseif m == 21 then
+				obj = factory.create("#anim-fac", pos)
+				sprite.play_flipbook(msg.url(nil, obj, "sprite"), "belt-t")
+			elseif m == 22 then
+				obj = factory.create("#anim-fac", pos)
+				sprite.play_flipbook(msg.url(nil, obj, "sprite"), "belt-t")
+				go.set(obj, "euler.z", 90)
+			elseif m == 23 then
+				obj = factory.create("#anim-fac", pos)
+				sprite.play_flipbook(msg.url(nil, obj, "sprite"), "belt-t")
+				go.set(obj, "euler.z", 180)
+			elseif m == 24 then
+				obj = factory.create("#anim-fac", pos)
+				sprite.play_flipbook(msg.url(nil, obj, "sprite"), "belt-t")
+				go.set(obj, "euler.z", 270)
 			elseif m == 29 then
 				obj = factory.create("#anim-fac", pos)
 				sprite.play_flipbook(msg.url(nil, obj, "sprite"), "belt-cc")

@@ -4,18 +4,6 @@ go.property("mask", 0)
 
 function init(self)
 	self.pos = data.world2tile(go.get_position())
-	self.valid = {
-		[1] = {43,30,58},
-		[2] = {43,30,45},
-		[3] = {30,45,58},
-		[4] = {43,45,58},
-		[5] = {43,30},
-		[6] = {30,45},
-		[7] = {45,58},
-		[8] = {43,58},
-		[9] = {43,45},
-		[10] = {30,58}
-	}
 	self.arrow = {
 		[30] = "right",
 		[43] = "up",
@@ -23,8 +11,8 @@ function init(self)
 		[58] = "left"
 	}
 	self.dir = 1
-	tilemap.set_tile("level#screen", "main", self.pos.x, self.pos.y, self.valid[self.mask][self.dir])
-	local t = self.valid[self.mask][self.dir]
+	tilemap.set_tile("level#screen", "main", self.pos.x, self.pos.y, data.valid[self.mask][self.dir])
+	local t = data.valid[self.mask][self.dir]
 	sprite.play_flipbook("#sprite", self.arrow[t])
 	go.animate("#outline", "tint.w", go.PLAYBACK_LOOP_FORWARD, 0.5, go.EASING_LINEAR, 1)
 	go.animate("#outline", "scale", go.PLAYBACK_LOOP_PINGPONG, 1.1, go.EASING_LINEAR, 2)
@@ -32,10 +20,10 @@ end
 
 local function switch(self)
 	self.dir = self.dir + 1
-	local t = self.valid[self.mask][self.dir]
+	local t = data.valid[self.mask][self.dir]
 	if not t then
 		self.dir = 1
-		t = self.valid[self.mask][self.dir]
+		t = data.valid[self.mask][self.dir]
 	end
 	tilemap.set_tile("level#screen", "main", self.pos.x, self.pos.y, t)
 	sprite.play_flipbook("#sprite", self.arrow[t])

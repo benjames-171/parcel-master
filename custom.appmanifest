@@ -1,0 +1,111 @@
+platforms:
+  armv7-ios:
+    context:
+      excludeLibs: [decoder_wav, liveupdate, graphics_transcoder_basisu, basis_transcoder, record, vpx, physics, LinearMath, BulletDynamics, BulletCollision, gamesys_model, gamesys_rig, rig, image]
+      excludeSymbols: [AudioDecoderWav, ResourceTypeWav, ScriptTypesExt, ScriptModelExt, ScriptImageExt]
+      symbols: [AudioDecoderOpus, ResourceTypeOpus]
+      libs: [decoder_opus, opus, liveupdate_null, graphics_transcoder_null, record_null, physics_2d_defold, gamesys_rig_null, gamesys_model_null, rig_null, image_null]
+      frameworks: []
+      linkFlags: []
+  arm64-ios:
+    context:
+      excludeLibs: [decoder_wav, liveupdate, graphics_transcoder_basisu, basis_transcoder, record, vpx, physics, LinearMath, BulletDynamics, BulletCollision, gamesys_model, gamesys_rig, rig, image]
+      excludeSymbols: [AudioDecoderWav, ResourceTypeWav, ScriptTypesExt, ScriptModelExt, ScriptImageExt]
+      symbols: [AudioDecoderOpus, ResourceTypeOpus]
+      libs: [decoder_opus, opus, liveupdate_null, graphics_transcoder_null, record_null, physics_2d_defold, gamesys_rig_null, gamesys_model_null, rig_null, image_null]
+      frameworks: []
+      linkFlags: []
+  x86_64-ios:
+    context:
+      excludeLibs: [decoder_wav, liveupdate, graphics_transcoder_basisu, basis_transcoder, record, vpx, physics, LinearMath, BulletDynamics, BulletCollision, gamesys_model, gamesys_rig, rig, image]
+      excludeSymbols: [AudioDecoderWav, ResourceTypeWav, ScriptTypesExt, ScriptModelExt, ScriptImageExt]
+      symbols: [AudioDecoderOpus, ResourceTypeOpus]
+      libs: [decoder_opus, opus, liveupdate_null, graphics_transcoder_null, record_null, physics_2d_defold, gamesys_rig_null, gamesys_model_null, rig_null, image_null]
+      frameworks: []
+      linkFlags: []
+  armv7-android:
+    context:
+      excludeLibs: [decoder_wav, liveupdate, graphics_transcoder_basisu, basis_transcoder, record, vpx, physics, LinearMath, BulletDynamics, BulletCollision, gamesys_model, gamesys_rig, rig, image]
+      excludeJars: []
+      excludeSymbols: [AudioDecoderWav, ResourceTypeWav, ScriptTypesExt, ScriptModelExt, ScriptImageExt]
+      symbols: [AudioDecoderOpus, ResourceTypeOpus]
+      libs: [decoder_opus, opus, liveupdate_null, graphics_transcoder_null, record_null, physics_2d_defold, gamesys_rig_null, gamesys_model_null, rig_null, image_null]
+      linkFlags: []
+      jetifier: true
+  arm64-android:
+    context:
+      excludeLibs: [decoder_wav, liveupdate, graphics_transcoder_basisu, basis_transcoder, record, vpx, physics, LinearMath, BulletDynamics, BulletCollision, gamesys_model, gamesys_rig, rig, image]
+      excludeJars: []
+      excludeSymbols: [AudioDecoderWav, ResourceTypeWav, ScriptTypesExt, ScriptModelExt, ScriptImageExt]
+      symbols: [AudioDecoderOpus, ResourceTypeOpus]
+      libs: [decoder_opus, opus, liveupdate_null, graphics_transcoder_null, record_null, physics_2d_defold, gamesys_rig_null, gamesys_model_null, rig_null, image_null]
+      linkFlags: []
+      jetifier: true
+  arm64-osx:
+    context:
+      excludeLibs: [decoder_wav, liveupdate, graphics_transcoder_basisu, basis_transcoder, record, vpx, physics, LinearMath, BulletDynamics, BulletCollision, gamesys_model, gamesys_rig, rig, image]
+      excludeSymbols: [AudioDecoderWav, ResourceTypeWav, ScriptTypesExt, ScriptModelExt, ScriptImageExt]
+      symbols: [AudioDecoderOpus, ResourceTypeOpus]
+      libs: [decoder_opus, opus, liveupdate_null, graphics_transcoder_null, record_null, physics_2d_defold, gamesys_rig_null, gamesys_model_null, rig_null, image_null]
+      frameworks: []
+      linkFlags: []
+  x86_64-osx:
+    context:
+      excludeLibs: [decoder_wav, liveupdate, graphics_transcoder_basisu, basis_transcoder, record, vpx, physics, LinearMath, BulletDynamics, BulletCollision, gamesys_model, gamesys_rig, rig, image]
+      excludeSymbols: [AudioDecoderWav, ResourceTypeWav, ScriptTypesExt, ScriptModelExt, ScriptImageExt]
+      symbols: [AudioDecoderOpus, ResourceTypeOpus]
+      libs: [decoder_opus, opus, liveupdate_null, graphics_transcoder_null, record_null, physics_2d_defold, gamesys_rig_null, gamesys_model_null, rig_null, image_null]
+      frameworks: []
+      linkFlags: []
+  x86_64-linux:
+    context:
+      excludeLibs: [decoder_wav, liveupdate, graphics_transcoder_basisu, basis_transcoder, record, vpx, physics, LinearMath, BulletDynamics, BulletCollision, gamesys_model, gamesys_rig, rig, image]
+      excludeSymbols: [AudioDecoderWav, ResourceTypeWav, ScriptTypesExt, ScriptModelExt, ScriptImageExt]
+      symbols: [AudioDecoderOpus, ResourceTypeOpus]
+      libs: [decoder_opus, opus, liveupdate_null, graphics_transcoder_null, record_null, physics_2d_defold, gamesys_rig_null, gamesys_model_null, rig_null, image_null]
+      linkFlags: []
+  arm64-linux:
+    context:
+      excludeLibs: [decoder_wav, liveupdate, graphics_transcoder_basisu, basis_transcoder, record, vpx, physics, LinearMath, BulletDynamics, BulletCollision, gamesys_model, gamesys_rig, rig, image]
+      excludeSymbols: [AudioDecoderWav, ResourceTypeWav, ScriptTypesExt, ScriptModelExt, ScriptImageExt]
+      symbols: [AudioDecoderOpus, ResourceTypeOpus]
+      libs: [decoder_opus, opus, liveupdate_null, graphics_transcoder_null, record_null, physics_2d_defold, gamesys_rig_null, gamesys_model_null, rig_null, image_null]
+      linkFlags: []
+  x86-win32:
+    context:
+      excludeLibs: [libdecoder_wav, libliveupdate, libgraphics_transcoder_basisu, libbasis_transcoder, librecord, vpx, libphysics, libLinearMath, libBulletDynamics, libBulletCollision, libgamesys_model, libgamesys_rig, librig, libimage]
+      excludeSymbols: [AudioDecoderWav, ResourceTypeWav, ScriptTypesExt, ScriptModelExt, ScriptImageExt]
+      symbols: [AudioDecoderOpus, ResourceTypeOpus]
+      libs: [libdecoder_opus.lib, libopus.lib, libliveupdate_null.lib, libgraphics_transcoder_null.lib, librecord_null.lib, libphysics_2d_defold.lib, libgamesys_rig_null.lib, libgamesys_model_null.lib, librig_null.lib, libimage_null.lib]
+      linkFlags: []
+  x86_64-win32:
+    context:
+      excludeLibs: [libdecoder_wav, libliveupdate, libgraphics_transcoder_basisu, libbasis_transcoder, librecord, vpx, libphysics, libLinearMath, libBulletDynamics, libBulletCollision, libgamesys_model, libgamesys_rig, librig, libimage]
+      excludeSymbols: [AudioDecoderWav, ResourceTypeWav, ScriptTypesExt, ScriptModelExt, ScriptImageExt]
+      symbols: [AudioDecoderOpus, ResourceTypeOpus]
+      libs: [libdecoder_opus.lib, libopus.lib, libliveupdate_null.lib, libgraphics_transcoder_null.lib, librecord_null.lib, libphysics_2d_defold.lib, libgamesys_rig_null.lib, libgamesys_model_null.lib, librig_null.lib, libimage_null.lib]
+      linkFlags: []
+  js-web:
+    context:
+      excludeLibs: [decoder_wav, liveupdate, graphics_transcoder_basisu, basis_transcoder, record, vpx, physics, LinearMath, BulletDynamics, BulletCollision, gamesys_model, gamesys_rig, rig, image]
+      excludeJsLibs: []
+      excludeSymbols: [AudioDecoderWav, ResourceTypeWav, ScriptTypesExt, ScriptModelExt, ScriptImageExt]
+      symbols: [AudioDecoderOpus, ResourceTypeOpus]
+      libs: [decoder_opus, opus, liveupdate_null, graphics_transcoder_null, record_null, physics_2d_defold, gamesys_rig_null, gamesys_model_null, rig_null, image_null]
+      linkFlags: []
+  wasm-web:
+    context:
+      excludeLibs: [decoder_wav, liveupdate, graphics_transcoder_basisu, basis_transcoder, record, vpx, physics, LinearMath, BulletDynamics, BulletCollision, gamesys_model, gamesys_rig, rig, image]
+      excludeJsLibs: []
+      excludeSymbols: [AudioDecoderWav, ResourceTypeWav, ScriptTypesExt, ScriptModelExt, ScriptImageExt]
+      symbols: [AudioDecoderOpus, ResourceTypeOpus]
+      libs: [decoder_opus, opus, liveupdate_null, graphics_transcoder_null, record_null, physics_2d_defold, gamesys_rig_null, gamesys_model_null, rig_null, image_null]
+      linkFlags: []
+  wasm_pthread-web:
+    context:
+      excludeLibs: [decoder_wav, liveupdate, graphics_transcoder_basisu, basis_transcoder, record, vpx, physics, LinearMath, BulletDynamics, BulletCollision, gamesys_model, gamesys_rig, rig, image]
+      excludeJsLibs: []
+      excludeSymbols: [AudioDecoderWav, ResourceTypeWav, ScriptTypesExt, ScriptModelExt, ScriptImageExt]
+      symbols: [AudioDecoderOpus, ResourceTypeOpus]
+      libs: [decoder_opus, opus, liveupdate_null, graphics_transcoder_null, record_null, physics_2d_defold, gamesys_rig_null, gamesys_model_null, rig_null, image_null]
+      linkFlags: []
