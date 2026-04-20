@@ -34,3 +34,6 @@ dependencies#0 = https://github.com/subsoap/defos/archive/refs/tags/v2.8.6.zip
 [native_extension]
 app_manifest = /custom.appmanifest
 
+[sprite]
+max_count = 192
+

@@ -28,6 +28,7 @@ local function input(self, action_id, action)
 			data.sound("menu-select")
 		elseif gui.pick_node(gui.get_node("replay"), action.x, action.y) then
 			nextlevel(self)
+			data.sound("menu-select")
 		end
 	end
 end

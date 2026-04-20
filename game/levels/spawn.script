@@ -42,6 +42,6 @@ function init(self)
 	end
 	self.freq = 3 - data.level / 20
 	self.freq = self.freq * data.mult * m
-	timer.delay(2 + self.id * 2, false, spawn)
+	timer.delay(2 + self.id, false, spawn)
 end
 

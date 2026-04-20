@@ -20,8 +20,10 @@ local function input(self, action_id, action)
 	if action_id == hash("action") and action.pressed then
 		if gui.pick_node(gui.get_node("tryagain"), action.x, action.y) then
 			tryagain(self)
+			data.sound("menu-select")
 		elseif gui.pick_node(gui.get_node("quit"), action.x, action.y) then
 			msg.post("player", "quit")
+			data.sound("menu-select")
 		end
 	end
 end
