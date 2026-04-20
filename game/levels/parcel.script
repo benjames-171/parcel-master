@@ -2,6 +2,8 @@ local data = require "main.data"
 
 local TIME = 0.52
 
+go.property("cycle", false)
+
 local function complete(self, t)
 	go.animate(".", "scale", go.PLAYBACK_ONCE_FORWARD, 0, go.EASING_LINEAR, 0.3)
 	go.animate("#sprite", "tint.w", go.PLAYBACK_ONCE_FORWARD, 0, go.EASING_LINEAR, 0.3)
@@ -97,7 +99,7 @@ function init(self)
 
 	sprite.play_flipbook("#sprite", "parcel-"..self.type)
 
-	if data.diff > 1 then
+	if self.cycle then
 		local freq = 25 * (4 - data.diff)
 		if math.random(1, freq) == 1 then
 			self.cycle = self.type

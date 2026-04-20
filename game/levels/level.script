@@ -30,12 +30,12 @@ local function parse(self)
 			local pos = data.tile2world(vmath.vector3(x, y, 0))
 			local m = tilecopy(x, y, "main")
 			local c = tilecopy(x, y, "control")
-			local t = tilecopy(x, y, "top")
+			local p = tilecopy(x, y, "property")
 			tilecopy(x, y, "top")
 
-			if c == 10 then
-				if t ~= 0 then t = t - 98 end
-				obj = factory.create("#spawn-fac", pos, nil, {id = id, mask = t})
+			if c == 10 or c == 12 then
+				if p ~= 0 then p = p - 98 end
+				obj = factory.create("#spawn-fac", pos, nil, {id = id, mask = p, cycle = c == 12})
 				id = id + 1
 			elseif c >= 99 and c <= 108 then
 				obj = factory.create("#junc-fac", pos, nil, {mask = c - 98})
