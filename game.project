@@ -37,3 +37,22 @@ app_manifest = /custom.appmanifest
 [sprite]
 max_count = 192
 
+[tilemap]
+max_tile_count = 512
+max_count = 2
+
+[mesh]
+max_count = 0
+
+[label]
+max_count = 0
+
+[factory]
+max_count = 32
+
+[collection_proxy]
+max_count = 2
+
+[collection]
+max_instances = 128
+

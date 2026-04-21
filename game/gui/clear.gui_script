@@ -16,6 +16,16 @@ local function nextlevel(self)
 	end)
 end
 
+local function tiercomplete(self)
+	ui.hide(self.node)
+	data.state = data.STATE_NULL
+	msg.post("main:/gui", "fadeout")
+	timer.delay(0.5, false, function()
+		msg.post("main:/gui", "fadein")
+		msg.post("main:/handler", "show_menu")
+	end)
+end
+
 local function input(self, action_id, action)
 	if action_id == hash("action") and action.pressed then
 		if gui.pick_node(gui.get_node("nextlevel"), action.x, action.y) then
@@ -23,7 +33,7 @@ local function input(self, action_id, action)
 			if data.level <= data.NUM_LEVELS then
 				nextlevel(self)
 			else
-				msg.post("main:/handler", "show_menu")
+				tiercomplete(self)
 			end
 			data.sound("menu-select")
 		elseif gui.pick_node(gui.get_node("replay"), action.x, action.y) then
