@@ -4,7 +4,6 @@ function init(self)
 	msg.post(".", "acquire_input_focus")
 	msg.post("#co", "disable")
 	msg.post("main:/gui", "fadein")
-	msg.post("main:/handler", "set_time_step", {factor = data.speed(), mode = 0})
 end
 
 local function input_playing(self, action_id, action)

@@ -54,5 +54,5 @@ max_count = 32
 max_count = 2
 
 [collection]
-max_instances = 128
+max_instances = 256
 
