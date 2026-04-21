@@ -105,9 +105,8 @@ local function parse(self)
 		end
 	end
 
-	data.parcels = (10 + (data.level * 2)) * id
+	data.parcels = 10 + data.level
 	data.home = data.parcels
-	data.mult = 0.75 + (id * 0.25)
 end
 
 local function shuffle(self)
@@ -141,12 +140,13 @@ local function setuplevel(self)
 	self.obj = {}
 	data.bin = {}
 	data.stars = 3
-	data.state = data.STATE_PLAYING
 	
 	parse(self)
 	if next(data.bin) ~= nil then
 		shuffle(self)
 	end
+
+	data.state = data.STATE_PLAYING
 end
 
 function init(self)

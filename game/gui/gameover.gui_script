@@ -8,7 +8,7 @@ end
 
 local function tryagain(self)
 	ui.hide(self.node)
-	data.state = data.STATE_PLAYING
+	data.state = data.STATE_NULL
 	msg.post("main:/gui", "fadeout")
 	timer.delay(0.5, false, function()
 		msg.post("level", "newlevel")

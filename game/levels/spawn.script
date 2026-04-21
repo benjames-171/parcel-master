@@ -36,12 +36,7 @@ end
 function init(self)
 	self.dir = 1
 	self.pos = data.world2tile(go.get_position())
-	local m = 1
-	if switch(self) then
-		m = 0.75
-	end
 	self.freq = 3 - data.level / 20
-	self.freq = self.freq * data.mult * m
-	timer.delay(2 + self.id, false, spawn)
+	timer.delay(2 + (self.id * 1.5), false, spawn)
 end
 
