@@ -105,8 +105,9 @@ local function parse(self)
 		end
 	end
 
-	data.parcels = 10 + data.level
+	data.parcels = math.floor(14 + (data.level * 1.5))
 	data.home = data.parcels
+	data.mult = id
 end
 
 local function shuffle(self)

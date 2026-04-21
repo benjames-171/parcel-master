@@ -23210,16 +23210,6 @@ layers {
     tile: 48
   }
   cell {
-    x: 52
-    y: 106
-    tile: 42
-  }
-  cell {
-    x: 55
-    y: 106
-    tile: 42
-  }
-  cell {
     x: 57
     y: 106
     tile: 48
@@ -23255,11 +23245,6 @@ layers {
     tile: 87
   }
   cell {
-    x: 52
-    y: 107
-    tile: 42
-  }
-  cell {
     x: 53
     y: 107
     tile: 87
@@ -23268,11 +23253,6 @@ layers {
     x: 54
     y: 107
     tile: 87
-  }
-  cell {
-    x: 55
-    y: 107
-    tile: 42
   }
   cell {
     x: 56

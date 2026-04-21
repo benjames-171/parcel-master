@@ -28,6 +28,8 @@ local function spawn(self)
 			local obj = factory.create("#parcel-fac", pos)
 			msg.post("level", "addobj", {url = obj})
 		end
+		self.freq = 3 - data.level / 20
+		self.freq = self.freq * data.mult
 		self.handle = timer.delay(self.freq, false, spawn)
 		switch(self)
 	end
@@ -36,7 +38,6 @@ end
 function init(self)
 	self.dir = 1
 	self.pos = data.world2tile(go.get_position())
-	self.freq = 3 - data.level / 20
 	timer.delay(2 + (self.id * 1.5), false, spawn)
 end
 
