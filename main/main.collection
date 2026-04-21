@@ -81,6 +81,12 @@ embedded_instances {
   "  data: \"sound: \\\"/assets/ogg/hiss2.ogg\\\"\\n"
   "\"\n"
   "}\n"
+  "embedded_components {\n"
+  "  id: \"win\"\n"
+  "  type: \"sound\"\n"
+  "  data: \"sound: \\\"/assets/ogg/win.ogg\\\"\\n"
+  "\"\n"
+  "}\n"
   ""
 }
 embedded_instances {

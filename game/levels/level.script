@@ -107,7 +107,8 @@ local function parse(self)
 
 	data.parcels = math.floor(14 + (data.level * 1.5))
 	data.home = data.parcels
-	data.mult = id
+	data.freq = 3 - data.level / 20
+	data.numspawners = id
 end
 
 local function shuffle(self)

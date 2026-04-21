@@ -2,6 +2,7 @@ local data = require "main.data"
 
 go.property("id", 0)
 go.property("mask", 0)
+go.property("cycle", false)
 
 local function switch(self)
 	if self.mask ~= 0 then
@@ -25,12 +26,10 @@ local function spawn(self)
 		end
 		if data.parcels >= 0 then
 			local pos = go.get_position()
-			local obj = factory.create("#parcel-fac", pos)
+			local obj = factory.create("#parcel-fac", pos, nil, {cycle = self.cycle})
 			msg.post("level", "addobj", {url = obj})
 		end
-		self.freq = 3 - data.level / 20
-		self.freq = self.freq * data.mult
-		self.handle = timer.delay(self.freq, false, spawn)
+		self.handle = timer.delay(data.freq, false, spawn)
 		switch(self)
 	end
 end
@@ -38,6 +37,9 @@ end
 function init(self)
 	self.dir = 1
 	self.pos = data.world2tile(go.get_position())
-	timer.delay(2 + (self.id * 1.5), false, spawn)
+	switch(self)
+	timer.delay(2, false, function()
+		timer.delay((data.freq / data.numspawners) * self.id, false, spawn)
+	end)
 end
 

@@ -103,7 +103,7 @@ function init(self)
 		local freq = 25 * (4 - data.diff)
 		if math.random(1, freq) == 1 then
 			self.cycle = self.type
-			self.cyclecount = 6 + (data.diff * 2)
+			self.cyclecount = 10 + (data.diff * 2)
 			self.handle = timer.delay(0.15, true, cycle)
 		end
 	end
