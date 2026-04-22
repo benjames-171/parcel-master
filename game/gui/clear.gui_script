@@ -34,6 +34,9 @@ local function input(self, action_id, action)
 			end
 			data.sound("menu-select")
 		elseif gui.pick_node(gui.get_node("replay"), action.x, action.y) then
+			ui.hide(self.node)
+			data.state = data.STATE_NULL
+			msg.post("main:/gui", "fadeout")
 			nextlevel(self)
 			data.sound("menu-select")
 		end
