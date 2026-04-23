@@ -105,7 +105,7 @@ local function parse(self)
 		end
 	end
 
-	data.parcels = math.floor(14 + (data.level * 1.5))
+	data.parcels = math.floor((14 + (data.level * 1.5)) / data.mult[data.diff][data.level])
 	data.home = data.parcels
 	data.freq = 3 - data.level / 20
 	data.numspawners = id
@@ -148,6 +148,9 @@ local function setuplevel(self)
 		shuffle(self)
 	end
 
+	sprite.set_hflip("#sprite", (data.level % 2) == 1)
+	sprite.set_vflip("#sprite", math.floor((data.level / 2) % 2) == 1)
+	
 	data.state = data.STATE_PLAYING
 end
 

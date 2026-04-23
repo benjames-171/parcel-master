@@ -4,12 +4,6 @@ go.property("id", 0)
 go.property("mask", 0)
 go.property("cycle", false)
 
-local mult = {
-	[1] = {1,1,1, 1,1,1, 1,1,1},
-	[2] = {1,1,1, 1,1,1, 1,1,1},
-	[3] = {1,1,1, 1,1,1, 1,1,1}
-}
-
 local function switch(self)
 	if self.mask ~= 0 then
 		self.dir = self.dir + 1
@@ -35,7 +29,7 @@ local function spawn(self)
 			local obj = factory.create("#parcel-fac", pos, nil, {cycle = self.cycle})
 			msg.post("level", "addobj", {url = obj})
 		end
-		self.handle = timer.delay(data.freq * data.numspawners * mult[data.diff][data.level], false, spawn)
+		self.handle = timer.delay(data.freq * data.numspawners * data.mult[data.diff][data.level], false, spawn)
 		switch(self)
 	end
 end

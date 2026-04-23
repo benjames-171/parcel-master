@@ -1804,6 +1804,11 @@ layers {
     h_flip: 1
   }
   cell {
+    x: 37
+    y: 8
+    tile: 74
+  }
+  cell {
     x: 38
     y: 8
     tile: 42
@@ -2050,7 +2055,8 @@ layers {
   cell {
     x: 37
     y: 9
-    tile: 87
+    tile: 75
+    h_flip: 1
   }
   cell {
     x: 38
@@ -4428,7 +4434,8 @@ layers {
   cell {
     x: 38
     y: 21
-    tile: 84
+    tile: 86
+    h_flip: 1
   }
   cell {
     x: 39
