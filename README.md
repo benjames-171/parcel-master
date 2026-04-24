@@ -1,3 +1,3 @@
-Defold game project made from GamedevJS jam 2026
+Defold game project made for GamedevJS jam 2026
 
 Play the game here https://benjames171.itch.io/parcel-master
