@@ -9,7 +9,7 @@ textures {
 }
 nodes {
   position {
-    x: 311.0
+    x: 9.0
     y: 171.0
   }
   type: TYPE_BOX
@@ -20,7 +20,7 @@ nodes {
 }
 nodes {
   position {
-    x: 9.0
+    x: 311.0
     y: 171.0
   }
   type: TYPE_BOX
@@ -31,7 +31,7 @@ nodes {
 }
 nodes {
   position {
-    x: 8.0
+    x: -8.0
   }
   size {
     x: 16.0
@@ -46,7 +46,7 @@ nodes {
   text: "00"
   font: "main"
   id: "parcels"
-  pivot: PIVOT_W
+  pivot: PIVOT_E
   outline {
     x: 0.03137255
     y: 0.019607844
