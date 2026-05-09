@@ -29,7 +29,7 @@ height = 180
 
 [project]
 title = Parcel Master
-version = 1.01
+version = 1.02
 dependencies#0 = https://github.com/subsoap/defos/archive/refs/tags/v2.8.6.zip
 
 [native_extension]
@@ -47,9 +47,6 @@ max_count = 0
 
 [label]
 max_count = 0
-
-[factory]
-max_count = 32
 
 [collection_proxy]
 max_count = 2
