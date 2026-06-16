@@ -22,12 +22,12 @@ nodes {
 }
 nodes {
   position {
-    x: -117.0
-    y: 32.0
+    x: -122.0
+    y: 24.0
   }
   size {
-    x: 80.0
-    y: 112.0
+    x: 70.0
+    y: 72.0
   }
   type: TYPE_BOX
   texture: "game/dialog"
@@ -43,48 +43,16 @@ nodes {
 }
 nodes {
   position {
-    x: -117.0
-    y: 75.0
+    y: 19.0
   }
   size {
-    x: 80.0
-    y: 16.0
-  }
-  color {
-    x: 0.92156863
-    y: 0.8352941
-    z: 0.7411765
-  }
-  type: TYPE_TEXT
-  text: "PAUSED"
-  font: "main"
-  id: "title"
-  outline {
-    x: 0.03137255
-    y: 0.019607844
-    z: 0.05490196
-  }
-  shadow {
-    x: 0.03137255
-    y: 0.019607844
-    z: 0.05490196
-  }
-  parent: "container"
-  inherit_alpha: true
-}
-nodes {
-  position {
-    x: -116.0
-    y: 55.0
-  }
-  size {
-    x: 60.0
+    x: 56.0
     y: 18.0
   }
   type: TYPE_BOX
   texture: "game/button-green"
   id: "resume"
-  parent: "container"
+  parent: "bg"
   inherit_alpha: true
   slice9 {
     x: 4.0
@@ -113,18 +81,14 @@ nodes {
   shadow_alpha: 0.0
 }
 nodes {
-  position {
-    x: -116.0
-    y: 13.0
-  }
   size {
-    x: 60.0
+    x: 56.0
     y: 18.0
   }
   type: TYPE_BOX
   texture: "game/button-orange"
   id: "restart"
-  parent: "container"
+  parent: "bg"
   inherit_alpha: true
   slice9 {
     x: 4.0
@@ -154,75 +118,16 @@ nodes {
 }
 nodes {
   position {
-    x: -132.0
-    y: 34.0
+    y: -19.0
   }
   size {
-    x: 28.0
-    y: 20.0
-  }
-  type: TYPE_BOX
-  texture: "game/button-yellow"
-  id: "sfx"
-  parent: "container"
-  inherit_alpha: true
-  slice9 {
-    x: 4.0
-    y: 4.0
-    z: 4.0
-    w: 4.0
-  }
-}
-nodes {
-  type: TYPE_BOX
-  texture: "game/sfx"
-  id: "sfx-icon"
-  parent: "sfx"
-  inherit_alpha: true
-  size_mode: SIZE_MODE_AUTO
-}
-nodes {
-  position {
-    x: -100.0
-    y: 34.0
-  }
-  size {
-    x: 28.0
-    y: 20.0
-  }
-  type: TYPE_BOX
-  texture: "game/button-yellow"
-  id: "music"
-  parent: "container"
-  inherit_alpha: true
-  slice9 {
-    x: 4.0
-    y: 4.0
-    z: 4.0
-    w: 4.0
-  }
-}
-nodes {
-  type: TYPE_BOX
-  texture: "game/music"
-  id: "music-icon"
-  parent: "music"
-  inherit_alpha: true
-  size_mode: SIZE_MODE_AUTO
-}
-nodes {
-  position {
-    x: -116.0
-    y: -7.0
-  }
-  size {
-    x: 60.0
+    x: 56.0
     y: 18.0
   }
   type: TYPE_BOX
   texture: "game/button-red"
   id: "quit"
-  parent: "container"
+  parent: "bg"
   inherit_alpha: true
   slice9 {
     x: 4.0

@@ -5,6 +5,44 @@ textures {
 }
 nodes {
   position {
+    x: 9.0
+    y: 171.0
+  }
+  type: TYPE_BOX
+  texture: "game/menu-yellow"
+  id: "sfx"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  type: TYPE_BOX
+  texture: "game/sfx"
+  id: "sfx-icon"
+  parent: "sfx"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 9.0
+    y: 157.0
+  }
+  type: TYPE_BOX
+  texture: "game/menu-yellow"
+  id: "music"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  type: TYPE_BOX
+  texture: "game/music"
+  id: "music-icon"
+  parent: "music"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
     x: 160.0
     y: 90.0
   }

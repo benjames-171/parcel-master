@@ -16,6 +16,7 @@ scale_mode = fit
 show_console_banner = 0
 show_made_with_defold = 0
 show_fullscreen_button = 0
+htmlfile = /engine_template.html
 
 [spine]
 max_count = 0

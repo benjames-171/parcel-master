@@ -1,10 +1,9 @@
 local data = require "main.data"
 local ui = require "main.ui"
 
-local MENU_LEN = 4
+local MENU_LEN = 6
 
 function init(self)
-	msg.post(".", "acquire_input_focus")
 	self.node = gui.get_node("container")
 	self.button = {}
 	self.last = 0
@@ -45,6 +44,10 @@ local function input(self, action_id, action)
 			ui.hide(self.node)
 			data.sound("menu-select")
 			msg.post("#credits", "show")
+		elseif gui.pick_node(self.button[5], action.x, action.y) then
+			sys.open_url("https://armor.ag/MoreGames")
+		elseif gui.pick_node(self.button[6], action.x, action.y) then
+			sys.open_url("https://bsky.app/profile/armorgamesstudios.com")
 		end
 	end
 end

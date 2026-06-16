@@ -26,7 +26,7 @@ nodes {
 }
 nodes {
   position {
-    y: 29.0
+    y: 40.0
   }
   type: TYPE_BOX
   texture: "main/logo"
@@ -38,7 +38,7 @@ nodes {
 nodes {
   position {
     x: -61.0
-    y: -34.0
+    y: -18.0
   }
   size {
     x: 56.0
@@ -85,7 +85,7 @@ nodes {
 }
 nodes {
   position {
-    y: -34.0
+    y: -18.0
   }
   size {
     x: 56.0
@@ -133,7 +133,7 @@ nodes {
 nodes {
   position {
     x: 60.0
-    y: -34.0
+    y: -18.0
   }
   size {
     x: 56.0
@@ -180,15 +180,41 @@ nodes {
 }
 nodes {
   position {
-    y: -64.0
+    x: -151.0
+    y: 53.0
+  }
+  type: TYPE_BOX
+  texture: "game/menu-blue"
+  id: "4"
+  parent: "container"
+  inherit_alpha: true
+  slice9 {
+    x: 4.0
+    y: 4.0
+    z: 4.0
+    w: 4.0
+  }
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  type: TYPE_BOX
+  texture: "game/credits"
+  id: "box"
+  parent: "4"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    y: -51.0
   }
   size {
-    x: 48.0
+    x: 88.0
     y: 18.0
   }
   type: TYPE_BOX
-  texture: "game/button-blue"
-  id: "4"
+  texture: "game/menu-blue"
+  id: "5"
   parent: "container"
   inherit_alpha: true
   slice9 {
@@ -199,6 +225,9 @@ nodes {
   }
 }
 nodes {
+  position {
+    y: 0.5
+  }
   size {
     x: 40.0
     y: 8.0
@@ -209,9 +238,9 @@ nodes {
     z: 0.7411765
   }
   type: TYPE_TEXT
-  text: "CREDITS"
+  text: "PLAY MORE GAMES"
   font: "small"
-  id: "text3"
+  id: "text5"
   outline {
     x: 1.0
     y: 1.0
@@ -222,7 +251,59 @@ nodes {
     y: 1.0
     z: 1.0
   }
-  parent: "4"
+  parent: "5"
+  inherit_alpha: true
+  outline_alpha: 0.0
+  shadow_alpha: 0.0
+}
+nodes {
+  position {
+    y: -69.0
+  }
+  size {
+    x: 50.0
+    y: 18.0
+  }
+  type: TYPE_BOX
+  texture: "game/menu-blue"
+  id: "6"
+  parent: "container"
+  inherit_alpha: true
+  slice9 {
+    x: 4.0
+    y: 4.0
+    z: 4.0
+    w: 4.0
+  }
+}
+nodes {
+  position {
+    y: 0.5
+  }
+  size {
+    x: 40.0
+    y: 8.0
+  }
+  color {
+    x: 0.92156863
+    y: 0.8352941
+    z: 0.7411765
+  }
+  type: TYPE_TEXT
+  text: "LIKE US!"
+  font: "small"
+  id: "text6"
+  outline {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+  shadow {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+  parent: "6"
   inherit_alpha: true
   outline_alpha: 0.0
   shadow_alpha: 0.0
