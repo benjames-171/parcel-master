@@ -32,6 +32,8 @@ M.freq = 1
 M.numspawners = 1
 M.gate = {}
 M.bin = {}
+M.splash = false
+M.state = M.STATE_NULL
 M.vp = vmath.vector4()
 M.mouse = vmath.vector3()
 

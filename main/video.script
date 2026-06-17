@@ -1,0 +1,76 @@
+local data = require "main.data"
+
+local function log(msg)
+	print(msg)
+end
+
+local function close(self)
+	msg.post("handler", "start")
+	data.playmusic("music")
+end
+
+local function video_end(self, video)
+	if video ~= nil then
+		print("Calling videoplayer.destroy", video)
+		videoplayer.destroy(video)
+	end
+
+	self.video = nil;
+	close(self)
+end
+
+local function video_callback(self, video, event, d)
+	log(string.format("VIDEO CALLBACK: video %d evt: %d ", video, event))
+	pprint(d)
+
+	if event == videoplayer.VIDEO_EVENT_READY then
+		print("videoplayer.VIDEO_EVENT_READY")
+		videoplayer.start(video)
+	elseif event == videoplayer.VIDEO_EVENT_FINISHED then
+		print("videoplayer.VIDEO_EVENT_FINISHED")
+		video_end(self, video)
+	elseif event == videoplayer.VIDEO_EVENT_FAILED then
+		print("videoplayer.VIDEO_EVENT_FAILED")
+		video_end(self, video)
+	else
+		print("Unexpected event")
+		close(self)
+	end
+end
+
+local function video_begin(self)
+	if videoplayer then
+		log("Loading...")
+
+		local is_editor_build = os.getenv("DM_SERVICE_PORT") ~= nil
+
+		local videos
+		if is_editor_build then
+			videos = {"res/web/648x432_v1.mp4"}
+		else
+			videos = {"648x432_v1.mp4"}
+		end
+
+		self.play_sound = not self.play_sound
+		self.video = videoplayer.create(videos[math.random(#videos)], {play_sound = self.play_sound}, video_callback)
+		log(self.video)
+	else
+		log("Could not initialize fullscreen videoplayer (on this platform?)")
+	end
+
+	if self.video == nil then
+		log("can't create another video");
+		video_end(self, self.video)
+	end
+end
+
+function init(self)
+	if self.splash then
+		close(self)
+	else
+		data.splash = true
+		self.video = nil
+		video_begin(self)
+	end
+end
+

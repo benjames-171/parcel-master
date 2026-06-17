@@ -16,7 +16,6 @@ scale_mode = fit
 show_console_banner = 0
 show_made_with_defold = 0
 show_fullscreen_button = 0
-htmlfile = /engine_template.html
 
 [spine]
 max_count = 0
@@ -30,8 +29,10 @@ height = 180
 
 [project]
 title = Parcel Master
-version = 1.02
+version = 1.02A
+bundle_resources = /res
 dependencies#0 = https://github.com/subsoap/defos/archive/refs/tags/v2.8.6.zip
+dependencies#1 = https://github.com/defold/extension-videoplayer-native/archive/master.zip
 
 [native_extension]
 app_manifest = /custom.appmanifest

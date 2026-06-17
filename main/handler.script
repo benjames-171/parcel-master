@@ -13,6 +13,7 @@ local function domaincheck()
 	lock.add_domain("*.cache.armorgames.com")
 	lock.add_domain("gamemedia.armorgames.com")
 	lock.add_domain("files.armorgames.com")
+	lock.add_domain("localhost")
 	
 	if not lock.verify_domain() then v = false end
 
@@ -20,29 +21,29 @@ local function domaincheck()
 end
 
 function init(self)
-	if domaincheck() then msg.post(".", "acquire_input_focus") end
-	msg.post("handler#menu", "load")
+	if domaincheck() or not html5 then msg.post(".", "acquire_input_focus") end
 	msg.post("@render:", "clear_color", {color = data.hex2rgba("#08050e")})
 	math.randomseed(os.time())
 	self.restart = nil
 	data.loadgamefile()
 	data.validate()
-	data.playmusic("music")
 	if not html5 then
 		defos.set_view_size(nil, nil, data.SCR_W * data.PIXEL, data.SCR_H * data.PIXEL)
 	end
 end
 
 function on_message(self, message_id, message, sender)
-	if message_id == hash("show_game") then
-		msg.post("handler#menu", "unload")
-		msg.post("handler#game", "load")
+	if message_id == hash("start") then
+		msg.post("#menu", "load")
+	elseif message_id == hash("show_game") then
+		msg.post("#menu", "unload")
+		msg.post("#game", "load")
 	elseif message_id == hash("show_menu") then
-		msg.post("handler#game", "unload")
-		msg.post("handler#menu", "load")
+		msg.post("#game", "unload")
+		msg.post("#menu", "load")
 	elseif message_id == hash("restart_game") then
-		msg.post("handler#game", "unload")
-		self.restart = "handler#game"
+		msg.post("#game", "unload")
+		self.restart = "#game"
 	elseif message_id == hash("proxy_unloaded") then
 		if self.restart then
 			msg.post(self.restart, "load")
