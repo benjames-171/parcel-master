@@ -20,11 +20,24 @@ local function domaincheck()
 	return v
 end
 
+local function wincb(self, event, d)
+	if event == window.WINDOW_EVENT_FOCUS_LOST then
+		sound.pause("main:/sound", true)
+	elseif event == window.WINDOW_EVENT_FOCUS_GAINED then
+		sound.pause("main:/sound", false)
+	elseif event == window.WINDOW_EVENT_ICONFIED then
+		sound.pause("main:/sound", true)
+	elseif event == window.WINDOW_EVENT_DEICONIFIED then
+		sound.pause("main:/sound", false)
+	end
+end
+
 function init(self)
 	if domaincheck() or not html5 then msg.post(".", "acquire_input_focus") end
 	msg.post("@render:", "clear_color", {color = data.hex2rgba("#08050e")})
 	math.randomseed(os.time())
 	self.restart = nil
+	window.set_listener(wincb)
 	data.loadgamefile()
 	data.validate()
 	if not html5 then
