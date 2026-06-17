@@ -46,9 +46,14 @@ nodes {
     x: 160.0
     y: 90.0
   }
+  size {
+    x: 320.0
+    y: 180.0
+  }
   type: TYPE_BOX
   id: "container"
   inherit_alpha: true
+  alpha: 0.0
 }
 nodes {
   size {
@@ -65,7 +70,6 @@ nodes {
   id: "up"
   pivot: PIVOT_S
   parent: "container"
-  inherit_alpha: true
   slice9 {
     x: 4.0
     y: 4.0
@@ -88,7 +92,6 @@ nodes {
   id: "down"
   pivot: PIVOT_N
   parent: "container"
-  inherit_alpha: true
   slice9 {
     x: 4.0
     y: 4.0

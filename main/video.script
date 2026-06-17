@@ -16,6 +16,7 @@ local function video_end(self, video)
 	end
 
 	self.video = nil;
+	data.splashdone = true
 	close(self)
 end
 
@@ -34,7 +35,7 @@ local function video_callback(self, video, event, d)
 		video_end(self, video)
 	else
 		print("Unexpected event")
-		close(self)
+		video_end(self, video)
 	end
 end
 
@@ -65,12 +66,7 @@ local function video_begin(self)
 end
 
 function init(self)
-	if self.splash then
-		close(self)
-	else
-		data.splash = true
-		self.video = nil
-		video_begin(self)
-	end
+	self.video = nil
+	video_begin(self)
 end
 

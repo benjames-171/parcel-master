@@ -47,6 +47,8 @@ function on_input(self, action_id, action)
 			display(self)
 			data.setmusicvol(data.save.music)
 			data.sound("menu-select")
+		elseif gui.pick_node(self.node, action.x, action.y) and not data.splashdone then
+			sys.open_url("https://armor.ag/MoreGames", {target = "_blank"})
 		end
 	end
 end
