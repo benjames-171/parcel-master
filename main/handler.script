@@ -7,10 +7,10 @@ local function domaincheck()
 	local v = true
 
 	lock.add_domain("armorgames.com")
-	lock.add_domain("*.armorgames.com")
-	lock.add_domain("*.*.armorgames.com")
-	lock.add_domain("*.cache.armorgames.com")
-	lock.add_domain("*.cache.armorgames.com")
+	lock.add_domain("armorgames.com")
+	lock.add_domain("armorgames.com")
+	lock.add_domain("cache.armorgames.com")
+	lock.add_domain("cache.armorgames.com")
 	lock.add_domain("gamemedia.armorgames.com")
 	lock.add_domain("files.armorgames.com")
 	lock.add_domain("localhost")
@@ -33,7 +33,8 @@ local function wincb(self, event, d)
 end
 
 function init(self)
-	if domaincheck() or not html5 then msg.post(".", "acquire_input_focus") end
+	--if domaincheck() or not html5 then msg.post(".", "acquire_input_focus") end
+	msg.post(".", "acquire_input_focus")
 	msg.post("@render:", "clear_color", {color = data.hex2rgba("#08050e")})
 	math.randomseed(os.time())
 	self.restart = nil
